@@ -1,11 +1,13 @@
 var app = {};
 app.helpers = {};
 app.data = {};
+app.loading = {"files": 3, "loaded": 0};
 app.newState = true; // only add new state to history if this is true - needed to make back button work properly
 app.range = 15; // km; default range to look for monitoring stations within
+app.IGNORE = -99;
 
 app.start = function() {
-    app.navigate();
+    app.navigate("home");
 }
 
 app.showHome = function() {
@@ -58,21 +60,35 @@ app.showLocation = function (obj) {
         history.pushState({"view": "location", "location":obj}, null, null);
     $( '#titlebar' ).empty().append( '<h1>' + obj.address + '</h1>' );
     $( '#content' ).empty();
-    var data = app.getAmbientData(obj.lat, obj.lng, obj.range);
-    if (!data) {
+    var dataAmbient = app.getAmbientData(obj.lat, obj.lng, obj.range);
+    if (!dataAmbient) {
         $( '#content' ).append("No monitoring stations in range");
     } else {
         var ulAmbient = $( '<ul>' ).appendTo( '#content' );
-        ulAmbient.append( '<li>Average FPM: ' + data.fpmAvg + '</li>' );
-        ulAmbient.append( '<li>Average Ozone: ' + data.ozoneAvg + '</li>' );
-        ulAmbient.append( '<li>Sulphur Dioxide: ' + data.sulphur + '</li>' );
-        ulAmbient.append( '<li>Nitrogen Dioxide: ' + data.nitrogen + '</li>' );
-        ulAmbient.append( '<li>VOCs: ' + data.voc + '</li>' );
+        ulAmbient.append( '<li>Average FPM: ' + dataAmbient.fpmAvg + '</li>' );
+        ulAmbient.append( '<li>Average Ozone: ' + dataAmbient.ozoneAvg + '</li>' );
+        ulAmbient.append( '<li>Sulphur Dioxide: ' + dataAmbient.sulphur + '</li>' );
+        ulAmbient.append( '<li>Nitrogen Dioxide: ' + dataAmbient.nitrogen + '</li>' );
+        ulAmbient.append( '<li>VOCs: ' + dataAmbient.voc + '</li>' );
         $( '#content' ).append( '<p>This information is the average of the data from:</p>' );
         var ulStations = $( '<ul>' ).appendTo( '#content' );
-        for (var i in data.stations) {
-            ulStations.append( '<li>' + data.stations[i].Address + '</li>' );
+        for (var i in dataAmbient.stations) {
+            ulStations.append( '<li>' + dataAmbient.stations[i].Address + '</li>' );
         }
+        
+    }
+    var dataPollutants = app.getEmissionsPollutantsData(obj.lat, obj.lng, obj.range);
+    if (!dataPollutants) {
+        $( '#content' ).append("No large emitters in range");
+    } else {
+        var ulPollutants = $( '<ul>' ).appendTo( '#content' );
+        ulPollutants.append( '<li>Total NOx Emissions: ' + dataPollutants.nox + '</li>' );
+        ulPollutants.append( '<li>Total SOx Emissions: ' + dataPollutants.sox + '</li>' );
+        ulPollutants.append( '<li>Total VOC Emissions: ' + dataPollutants.voc + '</li>' );
+        ulPollutants.append( '<li>Total PM2.5 Emissions: ' + dataPollutants.pm25 + '</li>' );
+        ulPollutants.append( '<li>Total PM10 Emissions: ' + dataPollutants.pm10 + '</li>' );
+        ulPollutants.append( '<li>Total TPM Emissions: ' + dataPollutants.tpm + '</li>' );
+        ulPollutants.append( '<li>Total CO Emissions: ' + dataPollutants.co + '</li>' );
     }
 }
 
@@ -119,18 +135,83 @@ app.getAmbientData = function (lat, lng, range) {
     return false;
 }
 
+app.helpers.total = function (values) {
+    var total = 0;
+    for (var i in values) {
+        if (parseFloat(values[i]) != app.IGNORE)
+            total += parseFloat(values[i]);
+    }
+    return total;
+}
+
+app.getEmissionsPollutantsData = function (lat, lng, range) {
+    var facilities = [];
+    for (var i in app.data.pollutants) {
+        var facility = app.data.pollutants[i];
+        if (app.helpers.getDistance(lat, lng, facility.Latitude, facility.Longitude) <= range) {
+            facilities.push(facility);
+        }
+    }
+    
+    if (facilities.length > 0) {
+        var data = {};
+        data.facilities = [];
+        data.nox = [];
+        data.sox = [];
+        data.voc = [];
+        data.pm25 = [];
+        data.pm10 = [];
+        data.tpm = [];
+        data.nh3 = [];
+        data.co = [];
+        for (var i in facilities) {
+            var obj = {};
+            obj.name = facilities[i]['Facility Name'];
+            obj.naics = facilities[i]['NAICS Name'];
+            obj.nox = facilities[i]['2011 NOx Emissions (t)'];
+            obj.sox = facilities[i]['2011 SOx Emissions (t)'];
+            obj.voc = facilities[i]['2011 VOC Emissions (t)'];
+            obj.pm25 = facilities[i]['2011 PM2.5 Emissions (t)'];
+            obj.pm10 = facilities[i]['2011 PM10 Emissions (t)'];
+            obj.tpm = facilities[i]['2011 VOC Emissions (t)'];
+            obj.nh3 = facilities[i]['2011 NH3 Emissions (t)'];
+            obj.co = facilities[i]['2011 CO Emissions (t)'];
+            data.facilities.push(obj);
+            
+            data.nox.push(obj.nox);
+            data.sox.push(obj.sox);
+            data.voc.push(obj.voc);
+            data.pm25.push(obj.pm25);
+            data.pm10.push(obj.pm10);
+            data.tpm.push(obj.tpm);
+            data.nh3.push(obj.nh3);
+            data.co.push(obj.co);
+        }
+        data.nox = app.helpers.total(data.nox);
+        data.sox = app.helpers.total(data.sox);
+        data.voc = app.helpers.total(data.voc);
+        data.pm25 = app.helpers.total(data.pm25);
+        data.pm10 = app.helpers.total(data.pm10);
+        data.tpm = app.helpers.total(data.tpm);
+        data.nh3 = app.helpers.total(data.nh3);
+        data.co = app.helpers.total(data.co);
+        return data;
+    }
+    return false;
+}
+
 app.helpers.average = function (values) {
     var totalNum = values.length;
     var total = 0;
     for (var i in values) {
-        if (values[i] >= 0) { // data stores unavailable numbers as -99
+        if (values[i] != app.IGNORE) { // if it's not an ignore value
             total += values[i];
         } else {
             totalNum -= 1;
         }
     }
     if (totalNum > 0)
-        return (total / totalNum);
+        return Math.round(total / totalNum * 100) / 100;
     return "No Data";
 }
 
@@ -149,9 +230,6 @@ app.helpers.getDistance = function (lat1,lon1,lat2,lon2) {
 
 app.navigate = function (view) {
     switch(view) {
-        case "":
-            app.showHome();
-            break;
         case "home":
             app.showHome();
             break;
@@ -167,8 +245,13 @@ app.navigate = function (view) {
     }
 }
 
+app.loading.checkAllDataLoaded = function () {
+    if (app.loading.loaded == app.loading.files)
+        app.start();
+}
+
 window.addEventListener('popstate', function(e) {
-    var view = '';
+    var view = "home";
     if (e.state)
         view = e.state.view;
     app.newState = false;
@@ -179,6 +262,14 @@ window.addEventListener('popstate', function(e) {
 $(function() {
     $.get('data/ambient.csv', function(data) {
         app.data.ambient = $.csv.toObjects(data, {"separator":"\t"});
-        app.start();
+        app.loading.loaded += 1;
+    });
+    $.get('data/emissions_pollutants.csv', function(data) {
+        app.data.pollutants = $.csv.toObjects(data, {"separator":"\t"});
+        app.loading.loaded += 1;
+    });
+    $.get('data/emissions_toxins.csv', function(data) {
+        app.data.toxins = $.csv.toObjects(data, {"separator":"\t"});
+        app.loading.loaded += 1;
     });
 });
