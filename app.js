@@ -100,24 +100,10 @@ app.helpers.makeLi = function (cat, type, text, value) {
 
 app.helpers.getRadius = function (type, place) {
     var values = [];
-    switch (type) {
-        case "ambient":
-            var chems = ["fpmAvg", "o3Avg", "so2", "no2", "voc"];
-            for (var i in chems) {
-                values.push(app.helpers.getLevel(type, chems[i], place[chems[i]]));
-            }
-            console.log(values);
-            return app.helpers.average(values);
-        case "pollutants":
-            var chems = ["nox", "sox", "voc", "pm25", "pm10"];
-            for (var i in chems) {
-                values.push(app.helpers.getLevel(type, chems[i], place[chems[i]]));
-            }
-            console.log(values);
-            return app.helpers.average(values);
-        case "toxics":
-            return app.helpers.average([place.hg, place.crvi]);
+    for (var i in place.indicators) {
+        values.push(app.helpers.getLevel(type, place.indicators[i].type, place.indicators[i].value));
     }
+    return app.helpers.average(values);
 }
 
 app.getAmbientData = function (lat, lng, range) {
@@ -132,43 +118,32 @@ app.getAmbientData = function (lat, lng, range) {
     if (stns.length > 0) {
         var data = {};
         data.stations = [];
-        data.fpmAvg = [];
-        data.fpmPeak = [];
-        data.o3Avg = [];
-        data.o3Peak = [];
-        data.so2 = [];
-        data.no2 = [];
-        data.voc = [];
+        data.indicators = [];
+        data.indicators.push({"type": "fpmAvg", "text": "Average FPM", "col": "2011 Average Fine Particulate Matter (µg/m3)","value": []});
+        //data.indicators.push({"type":"fpmPeak", "text": "Peak FPM", "col": "2011 Peak Fine Particulate Matter (µg/m3)", "value": []});
+        data.indicators.push({"type":"o3Avg", "text": "Average Ozone", "col": "2011 Average Ozone (ppb)", "value": []});
+        //data.indicators.push({"type":"o3Peak", "text": "Peak Ozone", "col": "2011 Peak Ozone (ppb)", "value": []});
+        data.indicators.push({"type":"so2", "text": "Sulphur Dioxide", "col": "2011 Sulphur Dioxide (ppb)", "value": []});
+        data.indicators.push({"type":"no2", "text": "Nitrogen Dioxide", "col": "2011 Nitrogen Dioxide (ppb)", "value":[]});
+        data.indicators.push({"type":"voc", "text": "Volatile Organic Compounds", "col": "2011 Volatile Organic Compounds (ppbC)", "value": []});
 
         for (var i in stns) {
             var obj = {};
             obj.name = stns[i]['Address'];
             obj.lat = stns[i]['Latitude'];
             obj.lng = stns[i]['Longitude'];
-            obj.fpmAvg = parseFloat(stns[i]['2011 Average Fine Particulate Matter (µg/m3)']);
-            obj.fpmPeak = parseFloat(stns[i]['2011 Peak Fine Particulate Matter (µg/m3)']);
-            obj.o3Avg = parseFloat(stns[i]['2011 Average Ozone (ppb)']);
-            obj.o3Peak = parseFloat(stns[i]['2011 Peak Ozone (ppb)']);
-            obj.so2 = parseFloat(stns[i]['2011 Sulphur Dioxide (ppb)']);
-            obj.no2 = parseFloat(stns[i]['2011 Nitrogen Dioxide (ppb)']);
-            obj.voc = parseFloat(stns[i]['2011 Volatile Organic Compounds (ppbC)']);
-            data.stations.push(obj);
+            obj.indicators = [];
+            for (var j in data.indicators) {
+                obj.indicators.push({"type": data.indicators[j].type, "text": data.indicators[j].text, "value": parseFloat(stns[i][data.indicators[j].col])});
+                data.indicators[j].value.push(parseFloat(stns[i][data.indicators[j].col]));
+            }
 
-            data.fpmAvg.push(obj.fpmAvg);
-            data.fpmPeak.push(obj.fpmPeak);
-            data.o3Avg.push(obj.o3Avg);
-            data.o3Peak.push(obj.o3Peak);
-            data.so2.push(obj.so2);
-            data.no2.push(obj.no2);
-            data.voc.push(obj.voc);
+            data.stations.push(obj);
         }
-        data.fpmAvg = app.helpers.average(data.fpmAvg);
-        data.fpmPeak = app.helpers.average(data.fpmPeak);
-        data.o3Avg = app.helpers.average(data.o3Avg);
-        data.o3Peak = app.helpers.average(data.o3Peak);
-        data.so2 = app.helpers.average(data.so2);
-        data.no2 = app.helpers.average(data.no2);
-        data.voc = app.helpers.average(data.voc);
+        
+        for (var i in data.indicators) {
+            data.indicators[i].value = app.helpers.average(data.indicators[i].value);
+        }
         
         return data;
     }
@@ -190,14 +165,16 @@ app.getEmissionsPollutantsData = function (lat, lng, range) {
     if (facilities.length > 0) {
         var data = {};
         data.facilities = [];
-        data.nox = [];
-        data.sox = [];
-        data.voc = [];
-        data.pm25 = [];
-        data.pm10 = [];
-        data.tpm = [];
-        data.nh3 = [];
-        data.co = [];
+        data.indicators = [];
+        data.indicators.push({"type":"nox", "text":"Total NOx Emissions", "col":"2011 NOx Emissions (t)", "value":[]});
+        data.indicators.push({"type":"sox", "text":"Total SOx Emissions", "col":"2011 SOx Emissions (t)", "value":[]});
+        data.indicators.push({"type":"voc", "text":"Total VOC Emissions", "col":"2011 VOC Emissions (t)", "value":[]});
+        data.indicators.push({"type":"pm25", "text":"Total PM2.5 Emissions", "col":"2011 PM2.5 Emissions (t)", "value":[]});
+        data.indicators.push({"type":"pm10", "text":"Total PM10 Emissions", "col":"2011 PM10 Emissions (t)", "value":[]});
+       // data.indicators.push({"type":"tpm", "text":"Total TPM Emissions", "col":"2011 TPM Emissions (t)", "value":[]});
+        data.indicators.push({"type":"nh3", "text":"Total NH3 Emissions", "col":"2011 NH3 Emissions (t)", "value":[]});
+        data.indicators.push({"type":"co", "text":"Total CO Emissions", "col":"2011 CO Emissions (t)", "value":[]});
+
         for (var i in facilities) {
             var obj = {};
             obj.name = facilities[i]['Facility Name'];
@@ -205,33 +182,16 @@ app.getEmissionsPollutantsData = function (lat, lng, range) {
             obj.naics = facilities[i]['NAICS Name'];
             obj.lat = facilities[i]['Latitude'];
             obj.lng = facilities[i]['Longitude'];
-            obj.nox = facilities[i]['2011 NOx Emissions (t)'];
-            obj.sox = facilities[i]['2011 SOx Emissions (t)'];
-            obj.voc = facilities[i]['2011 VOC Emissions (t)'];
-            obj.pm25 = facilities[i]['2011 PM2.5 Emissions (t)'];
-            obj.pm10 = facilities[i]['2011 PM10 Emissions (t)'];
-            obj.tpm = facilities[i]['2011 VOC Emissions (t)'];
-            obj.nh3 = facilities[i]['2011 NH3 Emissions (t)'];
-            obj.co = facilities[i]['2011 CO Emissions (t)'];
+            obj.indicators = [];
+            for (var j in data.indicators) {
+                obj.indicators.push({"type": data.indicators[j].type, "text": data.indicators[j].text, "value": parseFloat(facilities[i][data.indicators[j].col])});
+                data.indicators[j].value.push(parseFloat(facilities[i][data.indicators[j].col]));
+            }
             data.facilities.push(obj);
-            
-            data.nox.push(obj.nox);
-            data.sox.push(obj.sox);
-            data.voc.push(obj.voc);
-            data.pm25.push(obj.pm25);
-            data.pm10.push(obj.pm10);
-            data.tpm.push(obj.tpm);
-            data.nh3.push(obj.nh3);
-            data.co.push(obj.co);
         }
-        data.nox = app.helpers.total(data.nox);
-        data.sox = app.helpers.total(data.sox);
-        data.voc = app.helpers.total(data.voc);
-        data.pm25 = app.helpers.total(data.pm25);
-        data.pm10 = app.helpers.total(data.pm10);
-        data.tpm = app.helpers.total(data.tpm);
-        data.nh3 = app.helpers.total(data.nh3);
-        data.co = app.helpers.total(data.co);
+        for (var i in data.indicators) {
+            data.indicators[i].value = app.helpers.total(data.indicators[i].value);
+        }
         return data;
     }
     return false;
@@ -249,8 +209,11 @@ app.getEmissionsToxicsData = function (lat, lng, range) {
     if (facilities.length > 0) {
         var data = {};
         data.facilities = [];
-        data.hg = [];
-        data.crvi = [];
+        data.indicators = [];
+        data.indicators.push({"type":"hg", "text":"Total Mercury Emissions", "col":"2011 Hg Emissions (kg)", "value":[]});
+        data.indicators.push({"type":"crvi", "text":"Total Hexavalent Chromium Emissions", "col":"2011 Cr(VI) Emissions (kg)", "value":[]});
+
+
         for (var i in facilities) {
             var obj = {};
             obj.name = facilities[i]['Facility Name'];
@@ -258,15 +221,18 @@ app.getEmissionsToxicsData = function (lat, lng, range) {
             obj.naics = facilities[i]['NAICS Name'];
             obj.lat = facilities[i]['Latitude'];
             obj.lng = facilities[i]['Longitude'];
-            obj.hg = facilities[i]['2011 Hg Emissions (kg)'];
-            obj.crvi = facilities[i]['2011 Cr(VI) Emissions (kg)'];
+            for (var j in data.indicators) {
+                obj.indicators.push({"type": data.indicators[j].type, "text": data.indicators[j].text, "value": parseFloat(facilities[i][data.indicators[j].col])});
+                data.indicators[j].value.push(parseFloat(facilities[i][data.indicators[j].col]));
+            }
             data.facilities.push(obj);
             
             data.hg.push(obj.hg);
             data.crvi.push(obj.crvi);
         }
-        data.hg = app.helpers.total(data.hg);
-        data.crvi = app.helpers.total(data.crvi);
+        for (var i in data.indicators) {
+            data.indicators[i].value = app.helpers.total(data.indicators[i].value);
+        }
         return data;
     }
     return false;
@@ -337,11 +303,10 @@ app.showLocation = function (obj) {
             return function() {app.showMap(lat, lng, "ambient", data)};
         })(obj.lat, obj.lng, dataAmbient.stations)));
         var ulAmbient = $( '<ul>' ).appendTo( '#content' );
-        ulAmbient.append(app.helpers.makeLi("ambient", "fpmAvg", "Average FPM", dataAmbient.fpmAvg));
-        ulAmbient.append(app.helpers.makeLi("ambient", "o3Avg", "Average Ozone", dataAmbient.o3Avg));
-        ulAmbient.append(app.helpers.makeLi("ambient", "so2", "Sulphur Dioxide", dataAmbient.so2));
-        ulAmbient.append(app.helpers.makeLi("ambient", "no2", "Nitrogen Dioxide", dataAmbient.no2));
-        ulAmbient.append(app.helpers.makeLi("ambient", "voc", "VOCs", dataAmbient.voc));
+        for (var i in dataAmbient.indicators) {
+            var ind = dataAmbient.indicators[i];
+            ulAmbient.append(app.helpers.makeLi("ambient", ind.type, ind.text, ind.value));
+        }
         $( '#content' ).append( '<h3>Monitoring Stations:</h3>' );
         var ulStations = $( '<ul>' ).appendTo( '#content' );
         for (var i in dataAmbient.stations) {
@@ -359,13 +324,10 @@ app.showLocation = function (obj) {
             return function() {app.showMap(lat, lng, "pollutants", data)};
         })(obj.lat, obj.lng, dataPollutants.facilities)));
         var ulPollutants = $( '<ul>' ).appendTo( '#content' );
-        ulPollutants.append(app.helpers.makeLi("pollutants", "nox", "Total NOx Emissions", dataPollutants.nox));
-        ulPollutants.append(app.helpers.makeLi("pollutants", "sox", "Total SOx Emissions", dataPollutants.sox));
-        ulPollutants.append(app.helpers.makeLi("pollutants", "voc", "Total VOC Emissions", dataPollutants.voc));
-        ulPollutants.append(app.helpers.makeLi("pollutants", "pm25", "Total PM2.5 Emissions", dataPollutants.pm25));
-        ulPollutants.append(app.helpers.makeLi("pollutants", "pm10", "Total PM10 Emissions", dataPollutants.pm10));
-        ulPollutants.append(app.helpers.makeLi("pollutants", "tpm", "Total TPM Emissions", dataPollutants.tpm));
-        ulPollutants.append(app.helpers.makeLi("pollutants", "co", "Total CO Emissions", dataPollutants.co));
+        for (var i in dataPollutants.indicators) {
+            var ind = dataPollutants.indicators[i];
+            ulPollutants.append(app.helpers.makeLi("pollutants", ind.type, ind.text, ind.value));
+        }
     }
 
     $( '#content' ).append('<h2>Large Emissions (Toxics)</h2>');
@@ -377,8 +339,10 @@ app.showLocation = function (obj) {
             return function() {app.showMap(lat, lng, "ambient", data)};
         })(obj.lat, obj.lng, dataToxics.facilities)));
         var ulToxics = $( '<ul>' ).appendTo( '#content' );
-        ulToxics.append(app.helpers.makeLi("toxics", "hg", "Total Mercury Emissions (kg)", dataToxicx.hg));
-        ulToxics.append(app.helpers.makeLi("toxics", "crvi", "Total Hexavalent Chromium Emissions (kg)", dataToxicx.crvi));
+        for (var i in dataToxics.indicators) {
+            var ind = dataToxics.indicators[i];
+            ulToxics.append(app.helpers.makeLi("toxics", ind.type, ind.text, ind.value));
+        }
     }
 };
 
