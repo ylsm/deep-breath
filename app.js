@@ -430,7 +430,7 @@ app.showMap = function (lat, lng, type, locations) {
 
     var map = L.map('map').setView([lat, lng], 8);
     map.fitBounds([app.helpers.getDestinationPoint(lat, lng, 225, app.range + 2), app.helpers.getDestinationPoint(lat, lng, 45, app.range + 2)]);
-    new L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {minZoom:1, maxZoom: 12,   attribution: 'Map data © OpenStreetMap contributors'}).addTo(map);
+    new L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {minZoom:1, maxZoom: 20,   attribution: 'Map data © OpenStreetMap contributors'}).addTo(map);
 
     var markers = new L.LayerGroup();
     markers.addLayer(L.marker([lat, lng]).bindPopup("You"));
@@ -480,22 +480,29 @@ window.addEventListener('popstate', function(e) {
     if (e.state) {
         view = e.state.view;
         app.newState = false;
+    } else {
+        app.loading.checkAllDataLoaded();
+        return;
     }
     app.navigate(view);
     app.newState = true;
 });
 
 $(function() {
+    $( '#content' ).append('<div class="valign"><div class="loading"><p>Loading...</p></div></div>');
     $.get('data/ambient.csv', function(data) {
         app.data.ambient = $.csv.toObjects(data, {"separator":"\t"});
         app.loading.loaded += 1;
+        app.loading.checkAllDataLoaded();
     });
     $.get('data/emissions_pollutants.csv', function(data) {
         app.data.pollutants = $.csv.toObjects(data, {"separator":"\t"});
         app.loading.loaded += 1;
+        app.loading.checkAllDataLoaded();
     });
     $.get('data/emissions_toxics.csv', function(data) {
         app.data.toxics = $.csv.toObjects(data, {"separator":"\t"});
         app.loading.loaded += 1;
+        app.loading.checkAllDataLoaded();
     });
 });

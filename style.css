@@ -26,13 +26,13 @@ body {
 #titlebar h1 {
     margin: 0;
     padding: 0.5em 0 0.5em 0;
-    font-size: 2em;
+    font-size: 4em;
     font-family: Lemon, sans-serif;
     color: white;
 }
 
 #titlebar h1.title {
-    font-size: 4.5em;
+    font-size: 9em;
 }
 
 #content {
@@ -47,6 +47,12 @@ body {
     vertical-align: middle;
 }
 
+.loading {
+    text-align: center;
+    font: 6em Lemon;
+    color: white;
+}
+
 .home, .search {
     width: 80%;
     margin: auto;
@@ -55,8 +61,8 @@ body {
 
 .home button {
     width: 90%;
-    padding: 0.5em 0 0.5em 0;
-    font-size: 3em;
+    padding: 1em 0 1em 0;
+    font-size: 6em;
 }
 
 .home button, .search button {
@@ -76,14 +82,13 @@ body {
 }
 
 .search input, .search select, .search button {
-    height: 2em;
-    font-size: 2em;
+    font-size: 3.75em;
     font-family: Lato, sans-serif;
 }
 
 .search-results {
     width: 100%;
-    font-size: 2em;
+    font-size: 4em;
     color: white;
 }
 
@@ -94,7 +99,7 @@ body {
 }
 
 .search-results li {
-    padding: 0.5em 0 0.5em 0;
+    padding: 1em 0 1em 0;
     border-width: 0 0 1px 0;
     border-style: dotted;
     border-color: gray;
@@ -106,21 +111,21 @@ body {
 
 .location {
     width: 100%;
-    font-size: 2em;
+    font-size: 4em;
     color: white;
 }
 
 .location h2 {
     margin: 0;
     display: inline-block;
-    font-size: 0.5em;
+    font-size: 1em;
 }
 
 .location button {
     background-color: transparent;
     border-style: none;
     font-family: FontAwesome;
-    font-size: 1em;
+    font-size: 2em;
     color: #808080;
 }
 
@@ -140,7 +145,7 @@ body {
     background-color: transparent;
     border-style: none;
     font-family: FontAwesome;
-    font-size: 1em;
+    font-size: 1.5em;
     color: #808080;
 }
 
@@ -151,9 +156,9 @@ body {
 .location .details {
     width: 80%;
     margin: auto;
-    padding: 0.1em;
+    padding: 0.2em;
     background-color: #363636;
-    font-size: 0.5em;
+    font-size: 0.75em;
 }
 
 .location .details p {
@@ -173,24 +178,24 @@ ul.indicators {
 }
 
 .indicators li {
-    padding: 0.25em 0 0.25em 0;
+    padding: 0.5em 0 0.5em 0;
     border-width: 0 0 1px 0;
     border-style: dotted;
     border-color: gray;
 }
 
 .indicators .value {
-    padding-right: 0.25em;
+    padding-right: 0.5em;
     float: right;
 }
 
 .indicators .unit {
-    font-size: 0.5em;
+    font-size: 1em;
     color: gray;
 }
 
 .indicators div {
-    font-size: 0.5em;
+    font-size: 0.75em;
 }
 
 .indicators div li {
