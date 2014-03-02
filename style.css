@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lemon);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 html, body, #main, #map {
     width: 100%;
@@ -8,6 +10,7 @@ html, body, #main, #map {
 
 body {
     background-color: #212121;
+    font-family: Lato, sans-serif;
 }
 
 #main {
@@ -16,16 +19,20 @@ body {
 
 #titlebar {
     display: table-row;
-    height: 6em;
     text-align: center;
     background-color: black;
 }
 
 #titlebar h1 {
     margin: 0;
-    font-size: 6em;
+    padding: 0.5em 0 0.5em 0;
+    font-size: 2em;
     font-family: Lemon, sans-serif;
     color: white;
+}
+
+#titlebar h1.title {
+    font-size: 4.5em;
 }
 
 #content {
@@ -49,17 +56,34 @@ body {
 .home button {
     width: 90%;
     padding: 0.5em 0 0.5em 0;
-    font: 3em sans-serif;
+    font-size: 3em;
+}
+
+.home button, .search button {
+    background-color: #696969;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: 2px solid #696969;
+    color: white;
+}
+
+.search input, .search select {
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: 2px solid #696969;
+    color: white;
 }
 
 .search input, .search select, .search button {
     height: 2em;
-    font: 2em sans-serif;
+    font-size: 2em;
+    font-family: Lato, sans-serif;
 }
 
 .search-results {
     width: 100%;
-    font: 2em sans-serif;
+    font-size: 2em;
     color: white;
 }
 
@@ -82,7 +106,7 @@ body {
 
 .location {
     width: 100%;
-    font: 2em sans-serif;
+    font-size: 2em;
     color: white;
 }
 
@@ -93,25 +117,52 @@ body {
 }
 
 .location button {
-    float: right;
+    background-color: transparent;
+    border-style: none;
+    font-family: FontAwesome;
+    font-size: 1em;
+    color: #808080;
 }
 
 .location .topbar {
-    background-color: #000729;
+    background-color: #1A1A1A;
+    overflow: hidden;
+}
+
+.location .topbar h2 {
+    font-style: italic;
+    color: #999999;
+}
+
+.location .topbar button {
+    float: right;
+    padding-left: 0.5em;
+    background-color: transparent;
+    border-style: none;
+    font-family: FontAwesome;
+    font-size: 1em;
+    color: #808080;
+}
+
+.location button i {
+    font-style: normal;
 }
 
 .location .details {
     width: 80%;
     margin: auto;
     padding: 0.1em;
-    border-width: 0 1px 1px 1px;
-    border-style: solid;
-    border-color: gray;
+    background-color: #363636;
     font-size: 0.5em;
 }
 
 .location .details p {
     margin: 0;
+}
+
+.location .none-in-range {
+    margin: 0;
+    color: #808080;
 }
 
 ul.indicators {
@@ -138,6 +189,18 @@ ul.indicators {
     color: gray;
 }
 
+.indicators div {
+    font-size: 0.5em;
+}
+
+.indicators div li {
+    border-style:none;
+}
+
+.indicators p {
+    margin: 0;
+}
+
 .ambient .level-0 {
     color: gray;
 }
@@ -147,14 +210,18 @@ ul.indicators {
 }
 
 .ambient .level-2 {
-    color: #F19C1D;
+    color: #F0B021;
 }
 
 .ambient .level-3 {
-    color: #F84E0E;
+    color: #F57516;
 }
 
 .ambient .level-4 {
+    color: #FA3A0B;
+}
+
+.ambient .level-5 {
     color: #FF0000;
 }
 
@@ -167,17 +234,21 @@ ul.indicators {
 }
 
 .toxics .level-2, .pollutants .level-2 {
-    color: #F0B021;
+    color: #EFBC23;
 }
 
 .toxics .level-3, .pollutants .level-3 {
-    color: #F57516;
+    color: #F38D1A;
 }
 
 .toxics .level-4, .pollutants .level-4 {
-    color: #FA3A0B;
+    color: #F75E11;
 }
 
 .toxics .level-5, .pollutants .level-5 {
+    color: #FB2F08;
+}
+
+.toxics .level-6, .pollutants .level-6 {
     color: #FF0000;
 }

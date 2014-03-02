@@ -98,14 +98,36 @@ app.helpers.getLevel = function (cat, type, value) {
     return app.levels[cat][type].length;
 }
 
-app.helpers.makeLi = function (cat, type, text, value, unit) {
+app.helpers.makeLi = function (cat, type, text, value, unit, info, locations) {
     var level;
     if (parseFloat(value) == 0 || parseFloat(value) == app.IGNORE) {
         return null;
     } else {
         level = app.helpers.getLevel(cat, type, value);
     }
-    return $( '<li><span class="text">' + text + '</span><span class="value"><span class="level-' + level + '">' + value + '</span> <span class="unit">' + unit + '</span></span></li>' );
+    var li = $( '<li>' );
+    li.append('<span class="text">' + text + '</span>');
+    /*li.append($('<button class="more-info"><i class="fa-info-circle"></i></button>').click(function() {
+        $( '.' + cat + ' #' + type + '-details' ).slideToggle();
+    }));*/
+    li.append('<span class="value"><span class="level-' + level + '">' + value + '</span> <span class="unit">' + unit + '</span></span>');
+    if (info !== null && locations !== null) {
+        li.click(function() {
+        $( '.' + cat + ' #' + type + '-details' ).slideToggle();
+    });
+        var details = $( '<div id="' + type + '-details">' ).appendTo(li);
+        details.append( '<p>' + info + '</p>' );
+        var ul = $( '<ul>' ).appendTo(details);
+        for (var i = 0; i < locations.length; i++) {
+            for (var j = 0; j < locations[i].indicators.length; j++) {
+                if (locations[i].indicators[j].type == type && locations[i].indicators[j].value != app.IGNORE) {
+                    ul.append( '<li>' + locations[i].name + ': ' + locations[i].indicators[j].value + ' ' + locations[i].indicators[j].unit + '</li>');
+                }
+            }
+        }
+        details.hide();
+    }
+    return li;
 };
 
 app.helpers.getRadius = function (type, place) {
@@ -129,13 +151,13 @@ app.getAmbientData = function (lat, lng, range) {
         var data = {};
         data.stations = [];
         data.indicators = [];
-        data.indicators.push({"type": "fpmAvg", "text": "Average FPM", "col": "2011 Average Fine Particulate Matter (µg/m3)", "unit": "µg/m3", "value": []});
+        data.indicators.push({"type": "fpmAvg", "text": "Average FPM", "col": "2011 Average Fine Particulate Matter (µg/m3)", "unit": "µg/m3", "info": "", "value": []});
         //data.indicators.push({"type":"fpmPeak", "text": "Peak FPM", "col": "2011 Peak Fine Particulate Matter (µg/m3)", "unit": "µg/m3", "value": []});
-        data.indicators.push({"type":"o3Avg", "text": "Average Ozone", "col": "2011 Average Ozone (ppb)", "unit": "ppb", "value": []});
+        data.indicators.push({"type":"o3Avg", "text": "Average Ozone", "col": "2011 Average Ozone (ppb)", "unit": "ppb", "info": "", "value": []});
         //data.indicators.push({"type":"o3Peak", "text": "Peak Ozone", "col": "2011 Peak Ozone (ppb)", "unit": "ppb", "value": []});
-        data.indicators.push({"type":"so2", "text": "Sulphur Dioxide", "col": "2011 Sulphur Dioxide (ppb)", "unit": "ppb", "value": []});
-        data.indicators.push({"type":"no2", "text": "Nitrogen Dioxide", "col": "2011 Nitrogen Dioxide (ppb)", "unit": "ppb", "value":[]});
-        data.indicators.push({"type":"voc", "text": "Volatile Organic Compounds", "col": "2011 Volatile Organic Compounds (ppbC)", "unit": "ppbC", "value": []});
+        data.indicators.push({"type":"so2", "text": "Sulphur Dioxide", "col": "2011 Sulphur Dioxide (ppb)", "unit": "ppb", "info": "", "value": []});
+        data.indicators.push({"type":"no2", "text": "Nitrogen Dioxide", "col": "2011 Nitrogen Dioxide (ppb)", "unit": "ppb", "info": "", "value":[]});
+        data.indicators.push({"type":"voc", "text": "Volatile Organic Compounds", "col": "2011 Volatile Organic Compounds (ppbC)", "unit": "ppbC", "info": "", "value": []});
 
         for (var i in stns) {
             var obj = {};
@@ -176,14 +198,14 @@ app.getEmissionsPollutantsData = function (lat, lng, range) {
         var data = {};
         data.facilities = [];
         data.indicators = [];
-        data.indicators.push({"type":"nox", "text":"Total NOx Emissions", "col":"2011 NOx Emissions (t)", "unit": "t", "value":[]});
-        data.indicators.push({"type":"sox", "text":"Total SOx Emissions", "col":"2011 SOx Emissions (t)", "unit": "t", "value":[]});
-        data.indicators.push({"type":"voc", "text":"Total VOC Emissions", "col":"2011 VOC Emissions (t)", "unit": "t", "value":[]});
-        data.indicators.push({"type":"pm25", "text":"Total PM2.5 Emissions", "col":"2011 PM2.5 Emissions (t)", "unit": "t", "value":[]});
-        data.indicators.push({"type":"pm10", "text":"Total PM10 Emissions", "col":"2011 PM10 Emissions (t)", "unit": "t", "value":[]});
+        data.indicators.push({"type":"nox", "text":"Total NOx Emissions", "col":"2011 NOx Emissions (t)", "unit": "t", "info": "", "value":[]});
+        data.indicators.push({"type":"sox", "text":"Total SOx Emissions", "col":"2011 SOx Emissions (t)", "unit": "t", "info": "", "value":[]});
+        data.indicators.push({"type":"voc", "text":"Total VOC Emissions", "col":"2011 VOC Emissions (t)", "unit": "t", "info": "", "value":[]});
+        data.indicators.push({"type":"pm25", "text":"Total PM2.5 Emissions", "col":"2011 PM2.5 Emissions (t)", "unit": "t", "info": "", "value":[]});
+        data.indicators.push({"type":"pm10", "text":"Total PM10 Emissions", "col":"2011 PM10 Emissions (t)", "unit": "t", "info": "", "value":[]});
        // data.indicators.push({"type":"tpm", "text":"Total TPM Emissions", "col":"2011 TPM Emissions (t)", "value":[]});
-        data.indicators.push({"type":"nh3", "text":"Total NH3 Emissions", "col":"2011 NH3 Emissions (t)", "unit": "t", "value":[]});
-        data.indicators.push({"type":"co", "text":"Total CO Emissions", "col":"2011 CO Emissions (t)", "unit": "t", "value":[]});
+        data.indicators.push({"type":"nh3", "text":"Total NH3 Emissions", "col":"2011 NH3 Emissions (t)", "unit": "t", "info": "", "value":[]});
+        data.indicators.push({"type":"co", "text":"Total CO Emissions", "col":"2011 CO Emissions (t)", "unit": "t", "info": "", "value":[]});
 
         for (var i in facilities) {
             var obj = {};
@@ -220,8 +242,8 @@ app.getEmissionsToxicsData = function (lat, lng, range) {
         var data = {};
         data.facilities = [];
         data.indicators = [];
-        data.indicators.push({"type":"hg", "text":"Total Mercury Emissions", "col":"2011 Hg Emissions (kg)", "unit": "kg", "value":[]});
-        data.indicators.push({"type":"crvi", "text":"Total Hexavalent Chromium Emissions", "col":"2011 Cr(VI) Emissions (kg)", "unit": "kg", "value":[]});
+        data.indicators.push({"type":"hg", "text":"Total Mercury Emissions", "col":"2011 Hg Emissions (kg)", "unit": "kg", "info": "", "value":[]});
+        data.indicators.push({"type":"crvi", "text":"Total Hexavalent Chromium Emissions", "col":"2011 Cr(VI) Emissions (kg)", "unit": "kg", "info": "", "value":[]});
 
 
         for (var i in facilities) {
@@ -253,7 +275,7 @@ app.start = function() {
 app.showHome = function() {
     if (app.newState)
         history.pushState({"view": "home"}, null, null);
-    $( '#titlebar' ).empty().append( '<h1>Deep Breath</h1>' );
+    $( '#titlebar' ).empty().append( '<h1 class="title">Deep Breath</h1>' );
     $( '#content' ).empty();
     $( '#content' ).append($( '<div class="valign">' ).append($( '<div class="home">').append($( '<button>Enter Location</button>' ).click(function() { app.showSearch(); }))));
 };
@@ -314,17 +336,17 @@ app.showLocation = function (obj) {
     topbar.append('<h2>Ambient Pollutant Levels</h2>');
     var dataAmbient = app.getAmbientData(obj.lat, obj.lng, obj.range);
     if (!dataAmbient) {
-        div.append("No monitoring stations in range");
+        div.append("<p class='none-in-range'>No monitoring stations in range</p>");
     } else {
-        topbar.append( $( '<button class="details-button">View Details</button>').click(function () {
+        topbar.append( $( '<button class="details-button"><i class="fa-info-circle"></i></button>').click(function () {
             $( '.ambient .details' ).slideToggle();
         }));
-        topbar.append( $( '<button class="map-button">View Map</button>').click((function (lat, lng, data) {
+        topbar.append( $( '<button class="map-button"><i class="fa-map-marker"></i></button>').click((function (lat, lng, data) {
             return function() {app.showMap(lat, lng, "ambient", data)};
         })(obj.lat, obj.lng, dataAmbient.stations)));
 
         var details = $( '<div class="details">' ).appendTo(div);
-        details.append( '<p>Data was collected from these monitoring stations:</p>' );
+        details.append( '<p>Data was collected from these monitoring stations in 2011:</p>' );
         var ulStations = $( '<ul class="stations">' ).appendTo(details);
         for (var i in dataAmbient.stations) {
             $( '<li>' + dataAmbient.stations[i].name + '</li>' ).appendTo(ulStations);
@@ -334,7 +356,7 @@ app.showLocation = function (obj) {
         var ulAmbient = $( '<ul class="indicators">' ).appendTo(div);
         for (var i in dataAmbient.indicators) {
             var ind = dataAmbient.indicators[i];
-            ulAmbient.append(app.helpers.makeLi("ambient", ind.type, ind.text, ind.value, ind.unit));
+            ulAmbient.append(app.helpers.makeLi("ambient", ind.type, ind.text, ind.value, ind.unit, ind.info, dataAmbient.stations));
         }
     }
 
@@ -343,17 +365,17 @@ app.showLocation = function (obj) {
     topbar.append('<h2>Large Emissions (Pollutants)</h2>');
     var dataPollutants = app.getEmissionsPollutantsData(obj.lat, obj.lng, obj.range);
     if (!dataPollutants) {
-        div.append("No large emitters of pollutants in range");
+        div.append("<p class='none-in-range'>No large emitters of pollutants in range</p>");
     } else {
-        topbar.append( $( '<button class="details-button">View Details</button>').click(function () {
+        topbar.append( $( '<button class="details-button"><i class="fa-info-circle"></i></button>').click(function () {
             $( '.pollutants .details' ).slideToggle();
         }));
-        topbar.append( $( '<button>View Map</button>').click((function (lat, lng, data) {
+        topbar.append( $( '<button class="map-button"><i class="fa-map-marker"></i></button>').click((function (lat, lng, data) {
             return function() {app.showMap(lat, lng, "pollutants", data)};
         })(obj.lat, obj.lng, dataPollutants.facilities)));
 
         var details = $( '<div class="details">' ).appendTo(div);
-        details.append( '<p>Nearby emitters:</p>' );
+        details.append( '<p>These pollutants were emitted by the following facilities in 2011:</p>' );
         var ulFac = $( '<ul class="facilities">' ).appendTo(details);
         for (var i in dataPollutants.facilities) {
             $( '<li>' + dataPollutants.facilities[i].name + '</li>' ).appendTo(ulFac);
@@ -363,7 +385,7 @@ app.showLocation = function (obj) {
         var ulPollutants = $( '<ul class="indicators">' ).appendTo(div);
         for (var i in dataPollutants.indicators) {
             var ind = dataPollutants.indicators[i];
-            ulPollutants.append(app.helpers.makeLi("pollutants", ind.type, ind.text, ind.value, ind.unit));
+            ulPollutants.append(app.helpers.makeLi("pollutants", ind.type, ind.text, ind.value, ind.unit, ind.info, dataPollutants.facilities));
         }
     }
 
@@ -372,17 +394,17 @@ app.showLocation = function (obj) {
     topbar.append('<h2>Large Emissions (Toxics)</h2>');
     var dataToxics = app.getEmissionsToxicsData(obj.lat, obj.lng, obj.range);
     if (!dataToxics) {
-        div.append("No large emitters of toxics in range");
+        div.append("<p class='none-in-range'>No large emitters of toxics in range</p>");
     } else {
-        topbar.append( $( '<button class="details-button">View Details</button>').click(function () {
-            $( '.pollutants .details' ).slideToggle();
+        topbar.append( $( '<button class="details-button"><i class="fa-info-circle"></i></button>').click(function () {
+            $( '.toxics .details' ).slideToggle();
         }));
-        topbar.append( $( '<button class="map">View Map</button>').click((function (lat, lng, data) {
+        topbar.append( $( '<button class="map-button"><i class="fa-map-marker"></i></button>').click((function (lat, lng, data) {
             return function() {app.showMap(lat, lng, "toxics", data)};
         })(obj.lat, obj.lng, dataToxics.facilities)));
         
         var details = $( '<div class="details">' ).appendTo(div);
-        details.append( '<p>Nearby emitters:</p>' );
+        details.append( '<p>These toxics were emitted by the following facilities in 2011:</p>' );
         var ulFac = $( '<ul class="facilities">' ).appendTo(details);
         for (var i in dataToxics.facilities) {
             $( '<li>' + dataToxics.facilities[i].name + '</li>' ).appendTo(ulFac);
@@ -392,7 +414,7 @@ app.showLocation = function (obj) {
         var ulToxics = $( '<ul class="indicators">' ).appendTo(div);
         for (var i in dataToxics.indicators) {
             var ind = dataToxics.indicators[i];
-            ulToxics.append(app.helpers.makeLi("toxics", ind.type, ind.text, ind.value, ind.unit));
+            ulToxics.append(app.helpers.makeLi("toxics", ind.type, ind.text, ind.value, ind.unit, ind.info, dataToxics.facilities));
         }
     }
 };
@@ -419,7 +441,7 @@ app.showMap = function (lat, lng, type, locations) {
         var ul = $( '<ul>' ).appendTo(details);
         for (var j in locations[i].indicators) {
             var ind = locations[i].indicators[j];
-            ul.append(app.helpers.makeLi(type, ind.type, ind.text + ': ', ind.value, ind.unit));
+            ul.append(app.helpers.makeLi(type, ind.type, ind.text + ': ', ind.value, ind.unit, null, null));
         }
         marker.bindPopup(details[0]);
         markers.addLayer(marker);
