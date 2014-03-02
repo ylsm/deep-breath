@@ -143,7 +143,7 @@ window.addEventListener('popstate', function(e) {
 });
 
 $(function() {
-    $.get('ambient.csv', function(data) {
+    $.get('data/ambient.csv', function(data) {
         app.data.ambient = $.csv.toObjects(data, {"separator":"\t"});
         app.start();
     });
