@@ -1,20 +1,23 @@
 var app = {};
-
-app.data = {"airQuality":null};
+app.helpers = {};
+app.data = {};
+app.newState = true;
 
 app.start = function() {
-    app.showHome();
+    app.navigate();
 }
 
 app.showHome = function() {
-    history.pushState({"view":"home"}, null, null);
+    if (app.newState)
+        history.pushState(null, null, "home");
     $( '#titlebar' ).empty().append( '<h1>Deep Breath</h1>' );
     $( '#content' ).empty();
     $( '#content' ).append($( '<button>Enter Location</button>' ).click(function() { app.showSearch(); }));
 }
 
 app.showSearch = function() {
-    history.pushState({"view":"search"}, null, "search");
+    if (app.newState)
+        history.pushState(null, null, "search");
     $( '#titlebar' ).empty().append( '<h1>Enter Location</h1>' );
     $( '#content' ).empty();
     $( '#content' ).append($( '<input type="text" id="location"></input>' ));
@@ -33,45 +36,110 @@ app.parseLocation = function(str) {
 }
 
 app.showSearchResults = function (obj) {
-    history.pushState({"view":"search"}, null, "search");
+    if (app.newState)
+        history.pushState({"locations":obj}, null, "results");
     $( '#titlebar' ).empty().append( '<h1>Did you mean...</h1>' );
     $( '#content' ).empty();
     var ul = $( '<ul>' ).appendTo( '#content' );
     for (var i in obj) {
-        ul.append($( '<li>' + obj[i].formatted_address ).click((function(data) {
+        ul.append($( '<li>' + obj[i].formatted_address + '</li>' ).click((function(data) {
             return function() { app.showLocation(data); };
         })({"lat":obj[i].geometry.location.lat, "lng":obj[i].geometry.location.lng, "address":obj[i].formatted_address})));
     }
 }
 
 app.showLocation = function (obj) {
+    if (app.newState)
+        history.pushState({"location":obj}, null, "location");
     $( '#titlebar' ).empty().append( '<h1>' + obj.address + '</h1>' );
     $( '#content' ).empty();
-    // TODO: Find monitoring station within 10km radius, display info;
+    var data = app.getAirQualityData(obj.lat, obj.lng);
+    if (!data) {
+        $( '#content' ).append("No monitoring stations in range");
+    } else {
+        var ul = $( '<ul>' ).appendTo( '#content' );
+        ul.append( '<li>Average FPM: ' + data.fpmAvg + '</li>' );
+        ul.append( '<li>Average Ozone: ' + data.ozoneAvg + '</li>' );
+        ul.append( '<li>Sulphur Dioxide: ' + data.sulphur + '</li>' );
+        ul.append( '<li>Nitrogen Dioxide: ' + data.nitrogen + '</li>' );
+        ul.append( '<li>VOCs: ' + data.voc + '</li>' );
+    }
 }
 
 app.getAirQualityData = function (lat, lng) {
-    var data = [];
+    var stns = [];
     for (var i in app.data.airQuality) {
         var stn = app.data.airQuality[i];
-        if (Math.sqrt(pow((lat - stn.Latitude), 2) + pow((lng - stn.Longitude, 2))) <= 10) {
-            data.push(stn);
+        if (Math.sqrt(Math.pow((lat - stn.Latitude), 2) + Math.pow((lng - stn.Longitude, 2))) <= 10) {
+            stns.push(stn);
         }
     }
-    return data;
+    
+    if (stns.length > 0) {
+        var data = {};
+        data.stations = stns;
+        data.fpmAvg = 0;
+        data.fpmPeak = 0;
+        data.ozoneAvg = 0;
+        data.ozonePeak = 0;
+        data.sulphur = 0;
+        data.nitrogen = 0;
+        data.voc = 0;
+
+        for (var i in stns) {
+            data.fpmAvg += stns[i]['2011 Average Fine Particulate Matter (µg/m3)'];
+            data.fpmPeak += stns[i]['2011 Peak Fine Particulate Matter (µg/m3)'];
+            data.ozoneAvg += stns[i]['2011 Average Ozone (ppb)'];
+            data.ozonePeak += stns[i]['2011 Peak Ozone (ppb)'];
+            data.sulphur += stns[i]['2011 Sulphur Dioxide (ppb)'];
+            data.nitrogen += stns[i]['2011 Nitrogen Dioxide (ppb)'];
+            data.voc += stns[i]['2011 Volatile Organic Compounds (ppbC)'];
+        }
+        data.fpmAvg /= stns.length;
+        data.fpmPeak /= stns.length;
+        data.ozoneAvg /= stns.length;
+        data.ozonePeak /= stns.length;
+        data.sulphur /= stns.length;
+        data.nitrogen /= stns.length;
+        data.voc /= stns.length;
+        
+        return data;
+    }
+
+    return false;
+}
+
+app.helpers.getPageName = function () {
+    return window.location.pathname.split("/").pop();
+}
+
+app.navigate = function () {
+    switch(app.helpers.getPageName()) {
+        case "index.html":
+            app.showHome();
+            break;
+        case "deep-breath":
+            app.showHome();
+            break;
+        case "home":
+            app.showHome();
+            break;
+        case "search":
+            app.showSearch();
+            break;
+        case "results":
+            app.showSearchResults(event.state.locations);
+            break;
+        case "location":
+            app.showLocation(event.state.location);
+            break;
+    }
 }
 
 window.addEventListener('popstate', function(e) {
-    if (event.state.view) {
-        switch(event.state.view) {
-            case "home":
-                app.showHome();
-                break;
-            case "search":
-                app.showSearch();
-                break;
-        }
-    }
+    app.newState = false;
+    app.navigate();
+    app.newState = true;
 });
 
 $(function() {
