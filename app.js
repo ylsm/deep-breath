@@ -1,7 +1,7 @@
 var app = {};
 app.helpers = {};
 app.data = {};
-app.newState = true;
+app.newState = true; // only add new state to history if this is true - needed to make back button work properly
 
 app.start = function() {
     app.navigate();
@@ -9,7 +9,7 @@ app.start = function() {
 
 app.showHome = function() {
     if (app.newState)
-        history.pushState(null, null, "home");
+        history.pushState({"view": "home"}, null, null);
     $( '#titlebar' ).empty().append( '<h1>Deep Breath</h1>' );
     $( '#content' ).empty();
     $( '#content' ).append($( '<button>Enter Location</button>' ).click(function() { app.showSearch(); }));
@@ -17,7 +17,7 @@ app.showHome = function() {
 
 app.showSearch = function() {
     if (app.newState)
-        history.pushState(null, null, "search");
+        history.pushState({"view": "search"}, null, null);
     $( '#titlebar' ).empty().append( '<h1>Enter Location</h1>' );
     $( '#content' ).empty();
     $( '#content' ).append($( '<input type="text" id="location"></input>' ));
@@ -37,7 +37,7 @@ app.parseLocation = function(str) {
 
 app.showSearchResults = function (obj) {
     if (app.newState)
-        history.pushState({"locations":obj}, null, "results");
+        history.pushState({"view": "results", "locations":obj}, null, null);
     $( '#titlebar' ).empty().append( '<h1>Did you mean...</h1>' );
     $( '#content' ).empty();
     var ul = $( '<ul>' ).appendTo( '#content' );
@@ -50,27 +50,27 @@ app.showSearchResults = function (obj) {
 
 app.showLocation = function (obj) {
     if (app.newState)
-        history.pushState({"location":obj}, null, "location");
+        history.pushState({"view": "location", "location":obj}, null, null);
     $( '#titlebar' ).empty().append( '<h1>' + obj.address + '</h1>' );
     $( '#content' ).empty();
-    var data = app.getAirQualityData(obj.lat, obj.lng);
+    var data = app.getAmbientData(obj.lat, obj.lng);
     if (!data) {
         $( '#content' ).append("No monitoring stations in range");
     } else {
-        var ul = $( '<ul>' ).appendTo( '#content' );
-        ul.append( '<li>Average FPM: ' + data.fpmAvg + '</li>' );
-        ul.append( '<li>Average Ozone: ' + data.ozoneAvg + '</li>' );
-        ul.append( '<li>Sulphur Dioxide: ' + data.sulphur + '</li>' );
-        ul.append( '<li>Nitrogen Dioxide: ' + data.nitrogen + '</li>' );
-        ul.append( '<li>VOCs: ' + data.voc + '</li>' );
+        var ulAmbient = $( '<ul>' ).appendTo( '#content' );
+        ulAmbient.append( '<li>Average FPM: ' + data.fpmAvg + '</li>' );
+        ulAmbient.append( '<li>Average Ozone: ' + data.ozoneAvg + '</li>' );
+        ulAmbient.append( '<li>Sulphur Dioxide: ' + data.sulphur + '</li>' );
+        ulAmbient.append( '<li>Nitrogen Dioxide: ' + data.nitrogen + '</li>' );
+        ulAmbient.append( '<li>VOCs: ' + data.voc + '</li>' );
     }
 }
 
-app.getAirQualityData = function (lat, lng) {
+app.getAmbientData = function (lat, lng) {
     var stns = [];
     for (var i in app.data.airQuality) {
         var stn = app.data.airQuality[i];
-        if (Math.sqrt(Math.pow((lat - stn.Latitude), 2) + Math.pow((lng - stn.Longitude, 2))) <= 10) {
+        if (Math.sqrt(Math.pow((lat - stn.Latitude), 2) + Math.pow((lng - stn.Longitude), 2)) <= 10) {
             stns.push(stn);
         }
     }
@@ -87,13 +87,13 @@ app.getAirQualityData = function (lat, lng) {
         data.voc = 0;
 
         for (var i in stns) {
-            data.fpmAvg += stns[i]['2011 Average Fine Particulate Matter (µg/m3)'];
-            data.fpmPeak += stns[i]['2011 Peak Fine Particulate Matter (µg/m3)'];
-            data.ozoneAvg += stns[i]['2011 Average Ozone (ppb)'];
-            data.ozonePeak += stns[i]['2011 Peak Ozone (ppb)'];
-            data.sulphur += stns[i]['2011 Sulphur Dioxide (ppb)'];
-            data.nitrogen += stns[i]['2011 Nitrogen Dioxide (ppb)'];
-            data.voc += stns[i]['2011 Volatile Organic Compounds (ppbC)'];
+            data.fpmAvg += parseFloat(stns[i]['2011 Average Fine Particulate Matter (µg/m3)']);
+            data.fpmPeak += parseFloat(stns[i]['2011 Peak Fine Particulate Matter (µg/m3)']);
+            data.ozoneAvg += parseFloat(stns[i]['2011 Average Ozone (ppb)']);
+            data.ozonePeak += parseFloat(stns[i]['2011 Peak Ozone (ppb)']);
+            data.sulphur += parseFloat(stns[i]['2011 Sulphur Dioxide (ppb)']);
+            data.nitrogen += parseFloat(stns[i]['2011 Nitrogen Dioxide (ppb)']);
+            data.voc += parseFloat(stns[i]['2011 Volatile Organic Compounds (ppbC)']);
         }
         data.fpmAvg /= stns.length;
         data.fpmPeak /= stns.length;
@@ -113,12 +113,9 @@ app.helpers.getPageName = function () {
     return window.location.pathname.split("/").pop();
 }
 
-app.navigate = function () {
-    switch(app.helpers.getPageName()) {
-        case "index.html":
-            app.showHome();
-            break;
-        case "deep-breath":
+app.navigate = function (view) {
+    switch(view) {
+        case "":
             app.showHome();
             break;
         case "home":
@@ -137,14 +134,17 @@ app.navigate = function () {
 }
 
 window.addEventListener('popstate', function(e) {
+    var view = '';
+    if (e.state)
+        view = e.state.view;
     app.newState = false;
-    app.navigate();
+    app.navigate(view);
     app.newState = true;
 });
 
 $(function() {
-    $.get('air_quality.csv', function(data) {
-        app.data.airQuality = $.csv.toObjects(data, {"separator":"\t"});
+    $.get('ambient.csv', function(data) {
+        app.data.ambient = $.csv.toObjects(data, {"separator":"\t"});
         app.start();
     });
 });

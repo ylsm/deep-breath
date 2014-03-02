@@ -1,0 +1,369 @@
+Station Number	Province	City	Address	Location Type	2011 Average Fine Particulate Matter (µg/m3)	2011 Peak Fine Particulate Matter (µg/m3)	2011 Average Ozone (ppb)	2011 Peak Ozone (ppb)	2011 Sulphur Dioxide (ppb)	2011 Nitrogen Dioxide (ppb)	2011 Volatile Organic Compounds (ppbC)	Latitude	Longitude
+90120.00000000	Alberta	Edmonton	6240 113 Street	Urban Residential	9.02	25.92	36.38	64.50	-99.00	11.82	-99.00	53.50000000	-113.53000000
+90121.00000000	Alberta	Edmonton	17 Street & 105 Avenue	Urban Industrial	10.00	27.08	33.89	58.88	1.12	14.05	264.04	53.55000000	-113.37000000
+90122.00000000	Alberta	Edmonton	13335 127 St	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	53.59000000	-113.54000000
+90130.00000000	Alberta	Edmonton	10255 - 104th Street	Urban Commercial	10.12	28.33	29.64	55.63	-99.00	16.37	75.27	53.54000000	-113.50000000
+90131.00000000	Alberta	Sherwood Park	Broadmoor Blvd	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	53.53000000	-113.32000000
+90132.00000000	Alberta	Edmonton	4946-89 Street	Urban Commercial	5.31	17.42	-99.00	-99.00	-99.00	-99.00	-99.00	53.49000000	-113.46000000
+90218.00000000	Alberta	Calgary	49 Avenue & 15th Street S.E.	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	51.01000000	-114.03000000
+90222.00000000	Alberta	Calgary	39 St. & 29 Ave. N.W.	Urban Residential	8.41	24.40	36.04	56.17	-99.00	11.38	-99.00	51.08000000	-114.15000000
+90227.00000000	Alberta	Calgary	611-4th Street S.W.	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	51.05000000	-114.08000000
+90228.00000000	Alberta	Calgary	620 7th Ave SW	Urban Commercial	13.33	23.46	31.03	54.25	-99.00	16.00	56.50	51.05000000	-114.08000000
+90302.00000000	Alberta	Red Deer	73 Street & Riverside Drive	Urban Commercial	13.71	34.13	32.14	54.13	0.31	11.58	-99.00	52.30000000	-113.79000000
+90402.00000000	Alberta	Medicine Hat	12th St NW & Division Ave	Urban Residential	7.88	18.38	39.18	59.38	-99.00	7.27	-99.00	50.05000000	-110.68000000
+90502.00000000	Alberta	Lethbridge	                                                            	Urban Residential	6.61	18.50	40.38	60.50	0.13	5.74	-99.00	49.72000000	-112.80000000
+90601.00000000	Alberta	Fort Saskatchewan	9209a-96 Ave	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	53.70000000	-113.22000000
+90602.00000000	Alberta	Fort Saskatchewan	Rge Rd 220 & River Road	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	1.03	6.54	-99.00	53.75000000	-113.13000000
+90603.00000000	Alberta	Fort Saskatchewan	100 Ave East of 109st.	Urban Industrial	-99.00	-99.00	-99.00	-99.00	0.83	8.00	-99.00	53.72000000	-113.20000000
+90604.00000000	Alberta	Fort Saskatchewan	Rge Rd 214 Twp Rd 560	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	53.79000000	-113.08000000
+90605.00000000	Alberta	Fort Saskatchewan	Hwy 636 Rge Rd 223	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	53.71000000	-113.16000000
+90606.00000000	Alberta	Bruderheim	                                                            	Urban Residential	-99.00	-99.00	-99.00	65.63	1.06	6.12	-99.00	53.80000000	-112.93000000
+90701.00000000	Alberta	Fort Mcmurray	Franklin Avenue	Urban Residential	-99.00	86.14	29.02	62.75	0.59	11.29	-99.00	56.73000000	-111.39000000
+90702.00000000	Alberta	Fort Mcmurray	Timberlea Subdivision	Urban Residential	-99.00	-99.00	32.12	62.38	0.94	6.13	-99.00	56.75000000	-111.48000000
+90703.00000000	Alberta	Fort Mcmurray	Millennium	Urban Industrial	12.72	70.13	-99.00	-99.00	1.06	15.19	-99.00	56.89000000	-111.38000000
+90801.00000000	Alberta	Fort Mackay	Main Street	Urban Residential	-99.00	132.05	31.33	74.00	1.60	6.61	-99.00	57.19000000	-111.64000000
+90802.00000000	Alberta	Fort Mackay	Lower Camp	Rural Forest	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	57.03000000	-111.50000000
+90803.00000000	Alberta	Fort Mackay	Syncrude Airstrip	Rural Forest	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	57.05000000	-111.56000000
+90804.00000000	Alberta	Fort Mackay	Mannix	Rural Forest	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	56.97000000	-111.48000000
+90805.00000000	Alberta	Fort Mackay	Buffalo Viewpoint	Rural Forest	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	57.00000000	-111.59000000
+90806.00000000	Alberta	Fort Mackay	Syncrude Ue1	Rural Forest	7.31	49.29	31.35	67.38	1.22	6.26	47.99	57.15000000	-111.64000000
+90901.00000000	Alberta	Vegreville	Royal Park	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	53.58000000	-112.19000000
+91001.00000000	Alberta	Esther	Esther	Rural Undeveloped	-99.00	-99.00	39.23	58.25	-99.00	-99.00	-99.00	51.67000000	-110.20000000
+91101.00000000	Alberta	Elk Island	National Park	Rural Undeveloped	3.83	12.42	39.68	67.50	-99.00	-99.00	-99.00	53.68000000	-112.87000000
+91201.00000000	Alberta	Hightower Ridge	SE 11 54 2 W6	Rural Forest	1.70	7.42	48.51	66.38	0.08	0.98	-99.00	53.65000000	-118.18000000
+91301.00000000	Alberta	Tomahawk	SE 2 51 6 W5	Rural Agricultural	3.27	11.04	39.41	61.75	0.55	4.18	-99.00	53.37000000	-114.77000000
+91401.00000000	Alberta	Violet Grove	SE 17 48 08 W5	Rural Agricultural	-99.00	-99.00	40.84	62.50	0.43	4.48	-99.00	53.14000000	-115.14000000
+91501.00000000	Alberta	Beaverlodge	Beaverlodge Research Farm	Rural Agricultural	6.75	19.42	36.68	60.88	0.27	3.13	-99.00	55.20000000	-119.40000000
+91601.00000000	Alberta	Carrot Creek	SE 31 53 13 W5	Rural Agricultural	-99.00	-99.00	38.04	58.25	0.28	4.69	-99.00	53.62000000	-115.86000000
+91701.00000000	Alberta	Steeper	NE 12 48 22 W5	Rural Forest	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	53.13000000	-117.09000000
+91801.00000000	Alberta	Fort Chipewyan	Fort Chipewyan	Rural Undeveloped	3.21	12.88	33.22	58.00	0.27	1.06	-99.00	58.71000000	-111.18000000
+91901.00000000	Alberta	Caroline	16-30-034-5 W5	Rural Agricultural	4.20	13.00	39.93	59.00	0.59	2.15	-99.00	51.95000000	-114.70000000
+92001.00000000	Alberta	Grande Prairie	10327 - 107 Avenue	Urban Residential	-99.00	-99.00	33.13	58.13	0.22	9.01	-99.00	55.00000000	-118.79000000
+92101.00000000	Alberta	Bitumount	Albian Mine Site	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	57.28000000	-111.53000000
+92102.00000000	Alberta	Bitumount	Albian Muskeg River	Urban Industrial	7.96	51.88	-99.00	-99.00	1.25	12.21	-99.00	57.25000000	-111.51000000
+92201.00000000	Alberta	Lamont	Rge Rd 203 & Twp Rd 550	Rural Agricultural	-99.00	-99.00	40.51	64.38	1.13	3.78	-99.00	53.76000000	-112.88000000
+92301.00000000	Alberta	Redwater	Hwy 643, South of Twp Rd 564	Urban Industrial	5.42	20.50	-99.00	-99.00	4.54	7.63	-99.00	53.84000000	-113.10000000
+92601.00000000	Alberta	Breton	Hwy 20	Urban Residential	-99.00	-99.00	40.36	64.38	0.22	3.48	-99.00	53.09000000	-114.46000000
+92801.00000000	Alberta	Drayton Valley	48 Ave	Urban Residential	7.29	14.38	-99.00	-99.00	-99.00	-99.00	-99.00	53.22000000	-114.97000000
+92901.00000000	Alberta	Edson	7 Ave	Urban Residential	3.83	11.58	-99.00	-99.00	-99.00	-99.00	-99.00	53.59000000	-116.43000000
+93001.00000000	Alberta	Grande Prairie	                                                            	Urban Residential	5.10	15.58	-99.00	-99.00	0.26	-99.00	-99.00	55.12000000	-118.73000000
+93101.00000000	Alberta	Thorsby	Range Road 15	Urban Residential	3.58	11.17	35.18	58.75	0.66	2.79	-99.00	53.30000000	-114.22000000
+93202.00000000	Alberta	Hinton	Private Road	Urban Residential	7.95	14.67	-99.00	-99.00	-99.00	-99.00	-99.00	53.43000000	-117.54000000
+93801.00000000	Alberta	Warburg	Range Road 34	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	0.56	7.82	-99.00	53.53000000	-114.64000000
+93901.00000000	Alberta	Thorsby	Range Road 11	Rural Agricultural	3.66	11.38	-99.00	-99.00	0.26	3.95	-99.00	53.63000000	-114.42000000
+94001.00000000	Alberta	Debolt	Goodwin Road	Urban Residential	4.03	16.27	-99.00	-99.00	0.42	-99.00	-99.00	55.41000000	-118.28000000
+94201.00000000	Alberta	Sunnybrook	Range Road 24	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	53.38000000	-114.41000000
+94202.00000000	Alberta	Sunnybrook	                                                            	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	0.74	5.11	-99.00	53.49000000	-114.45000000
+94301.00000000	Alberta	Cold Lake	15 Ave	Urban Residential	-99.00	-99.00	35.09	59.43	0.27	3.91	-99.00	54.46000000	-110.17000000
+94401.00000000	Alberta	Anzac	                                                            	Urban Residential	6.00	16.17	35.99	57.25	0.20	1.72	-99.00	56.45000000	-111.04000000
+100110.00000000	British Columbia	Metro Van - Burnaby	6400 E. Hastings & Kensington	Urban Residential	3.58	8.71	23.47	42.13	1.11	11.21	-99.00	49.28000000	-122.97000000
+100111.00000000	British Columbia	Metro Van - Port Moody	Moody & Esplanade Port Moody	Urban Industrial	4.50	10.25	23.90	44.13	1.12	12.54	90.75	49.28000000	-122.85000000
+100112.00000000	British Columbia	Metro Van - Vancouver	Robson/Hornby	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.28000000	-123.12000000
+100118.00000000	British Columbia	Metro Van - Vancouver	2550 West 10th Avenue	Urban Residential	4.31	9.29	24.95	44.75	1.55	16.70	-99.00	49.26000000	-123.16000000
+100119.00000000	British Columbia	Metro Van - Burnaby	5455 Rumble Street	Urban Residential	3.77	9.17	24.79	41.38	0.59	14.01	44.16	49.22000000	-122.99000000
+100120.00000000	British Columbia	Metro Van - Burnaby	Pandora & Alpha St. Burnaby	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.28000000	-123.00000000
+100121.00000000	British Columbia	Metro Van - Vancouver	75 Riverside Dr. N. Vancouver	Urban Residential	4.53	9.58	22.30	40.00	2.00	13.27	-99.00	49.30000000	-123.02000000
+100122.00000000	British Columbia	Metro Van - Port Moody	Elementary Road Anmore	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.31000000	-122.86000000
+100124.00000000	British Columbia	Metro Van - Port Moody	475 Guildford Way Port Moody	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.28000000	-122.82000000
+100125.00000000	British Columbia	Metro Van - Delta	8544 116th Ave. Delta	Urban Residential	-99.00	-99.00	25.46	44.86	-99.00	13.34	-99.00	49.16000000	-122.90000000
+100126.00000000	British Columbia	Metro Van - Burnaby	Sfu, University Drive W	Urban Residential	-99.00	-99.00	32.68	47.63	-99.00	8.08	-99.00	49.28000000	-122.92000000
+100127.00000000	British Columbia	Metro Van - Surrey	19000 & 72nd Ave. Surrey	Urban Residential	4.20	9.25	28.24	48.63	-99.00	9.64	-99.00	49.13000000	-122.69000000
+100128.00000000	British Columbia	Metro Van - Richmond	Williams & Aragon Richmond	Urban Residential	4.43	10.79	26.71	45.00	0.54	13.08	-99.00	49.14000000	-123.11000000
+100129.00000000	British Columbia	Metro Van - Port Coquitlam	Hamilton & Paisley	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.28000000	-122.73000000
+100131.00000000	British Columbia	Metro Van - Vancouver	Seymor Falls North Vancouver	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.44000000	-122.97000000
+100132.00000000	British Columbia	Metro Van - Vancouver	16th St. & Jones Ave North Van	Urban Residential	-99.00	-99.00	25.17	44.75	1.37	11.34	-99.00	49.32000000	-123.08000000
+100133.00000000	British Columbia	Metro Van - Burnaby	7815 Shellmount	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	145.94	49.27000000	-122.94000000
+100134.00000000	British Columbia	Metro Van - Richmond	3153 Templeton Street	Urban Residential	4.24	10.71	25.57	42.00	0.79	14.29	49.14	49.19000000	-123.15000000
+100135.00000000	British Columbia	Metro Van - Coquitlam	1250 Pinetree Way	Urban Residential	-99.00	-99.00	25.90	45.13	-99.00	10.65	-99.00	49.29000000	-122.79000000
+100136.00000000	British Columbia	Metro Van - Burnaby	Grosvenor Cresent - Burnaby	Urban Residential	-99.00	-99.00	-99.00	-99.00	1.63	-99.00	-99.00	49.29000000	-122.99000000
+100137.00000000	British Columbia	Metro Van - Burnaby	Eton and Madison Ave Burnaby	Urban Residential	-99.00	-99.00	-99.00	-99.00	2.91	-99.00	414.93	49.29000000	-123.01000000
+100138.00000000	British Columbia	Metro Van - Vancouver West	6350 Marine Drive	Urban Residential	3.60	7.71	-99.00	-99.00	-99.00	-99.00	-99.00	49.37000000	-123.28000000
+100139.00000000	British Columbia	Metro Van - North Vancouver	1221 West 15th St	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.32000000	-123.11000000
+100202.00000000	British Columbia	Prince George	1011 4th Avenue	Urban Commercial	5.11	18.00	30.28	54.63	1.90	10.11	63.32	53.91000000	-122.74000000
+100205.00000000	British Columbia	Prince George	Gladstone School	Urban Residential	4.09	15.46	-99.00	-99.00	1.07	-99.00	-99.00	53.86000000	-122.76000000
+100210.00000000	British Columbia	Prince George	                                                            	Urban Residential	-99.00	-99.00	-99.00	-99.00	3.18	-99.00	-99.00	53.90000000	-122.70000000
+100211.00000000	British Columbia	Prince George	775 E Highway 16	Urban Residential	-99.00	-99.00	-99.00	-99.00	3.25	-99.00	-99.00	53.91000000	-122.71000000
+100212.00000000	British Columbia	Prince George	8901 Penn Rd		-99.00	-99.00	-99.00	-99.00	0.63	-99.00	-99.00	53.84000000	-122.73000000
+100213.00000000	British Columbia	Prince George	1885 Foreman Rd		5.46	14.46	-99.00	-99.00	-99.00	-99.00	-99.00	53.94000000	-122.68000000
+100214.00000000	British Columbia	Prince George	333 Becott Place		4.64	16.54	-99.00	-99.00	-99.00	-99.00	-99.00	53.91000000	-122.73000000
+100303.00000000	British Columbia	Victoria	1250 Quadra St.	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	48.42000000	-123.36000000
+100304.00000000	British Columbia	Victoria	923 Topaz	Urban Commercial	7.63	22.92	23.26	40.75	1.37	9.04	-99.00	48.43000000	-123.36000000
+100307.00000000	British Columbia	Victoria	2005 Sooke Road	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	48.43000000	-123.47000000
+100308.00000000	British Columbia	Victoria	3300 Wishart Road	Urban Commercial	8.08	20.00	30.80	48.14	1.01	4.60	-99.00	48.42000000	-123.49000000
+100314.00000000	British Columbia	Victoria	Tsartlip Band Property	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	48.58000000	-123.44000000
+100315.00000000	British Columbia	Victoria	DND Property at Rocky Point	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	48.31000000	-123.56000000
+100316.00000000	British Columbia	Victoria	2363 Setchfield Ave	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	48.47000000	-123.51000000
+100401.00000000	British Columbia	Kamloops	317 Seymour St.	Urban Commercial	7.68	18.42	-99.00	-99.00	0.77	-99.00	-99.00	50.67000000	-120.33000000
+100402.00000000	British Columbia	Kamloops	Mayfair Street	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	50.70000000	-120.40000000
+100701.00000000	British Columbia	Kelowna	3333 College Way	Urban Commercial	3.97	11.79	34.15	53.50	0.22	7.38	-99.00	49.86000000	-119.47000000
+100801.00000000	British Columbia	Keremos	702 - 4th St	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.20000000	-119.83000000
+101002.00000000	British Columbia	Metro Van - Abbotsford	33660 South Fraser Highway	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.05000000	-122.29000000
+101003.00000000	British Columbia	Metro Van - Abbotsford	32995 Bevan Ave.	Urban Residential	3.79	9.88	28.21	49.75	0.21	8.71	-99.00	49.04000000	-122.31000000
+101004.00000000	British Columbia	Metro Van - Abbotsford	31790 Walmsley Avenue	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.03000000	-122.34000000
+101101.00000000	British Columbia	Metro Van-Chilliwack	46244 Airport Road	Urban Residential	4.16	10.00	27.32	50.00	-99.00	8.13	33.72	49.16000000	-121.94000000
+101202.00000000	British Columbia	Metro Van-pitt Meadows	18477 Dewdny Trunk	Urban Residential	3.97	10.33	28.31	47.25	0.30	7.23	-99.00	49.25000000	-122.71000000
+101301.00000000	British Columbia	Metro Van-Langley	23752 52nd Avenue	Rural Undeveloped	4.38	12.75	29.32	48.13	0.15	6.27	-99.00	49.10000000	-122.57000000
+101401.00000000	British Columbia	Metro Van-Hope	62715 Airport Road	Rural Undeveloped	3.28	8.58	28.11	50.00	-99.00	7.17	-99.00	49.37000000	-121.50000000
+101501.00000000	British Columbia	Metro Van - Maple Ridge	23124 118th Avenue	Urban Residential	-99.00	-99.00	28.36	50.13	-99.00	7.57	-99.00	49.22000000	-122.58000000
+101601.00000000	British Columbia	Squamish	38075 2nd Avenue	Urban Residential	-99.00	-99.00	25.98	45.25	0.87	6.67	-99.00	49.71000000	-123.15000000
+101701.00000000	British Columbia	Quesnel	585 Callanan Street	Urban Residential	6.48	17.83	29.29	51.63	0.42	9.74	-99.00	52.98000000	-122.49000000
+101702.00000000	British Columbia	Quesnel	950 Mountain Ash Road	Urban Residential	6.26	20.91	-99.00	-99.00	-99.00	-99.00	-99.00	52.96000000	-122.45000000
+101703.00000000	British Columbia	Quesnel	501 Pinecrest Road	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	53.00000000	-122.51000000
+101704.00000000	British Columbia	Quesnel	Correlieu School	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	52.97000000	-122.52000000
+101801.00000000	British Columbia	Creston	Prince Charles Secondary School	Urban Residential	4.20	11.67	-99.00	-99.00	-99.00	-99.00	-99.00	49.09000000	-116.51000000
+101803.00000000	British Columbia	Creston	Canada/US Border	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.01000000	-116.53000000
+102001.00000000	British Columbia	Saturna	Saturna	Rural Forest	-99.00	-99.00	32.62	48.38	-99.00	-99.00	10.74	48.78000000	-123.13000000
+102102.00000000	British Columbia	Nanaimo	280 Labieux Road	Urban Residential	3.23	7.71	28.61	45.43	0.94	7.36	-99.00	49.20000000	-123.99000000
+102201.00000000	British Columbia	Trail	Butler Park	Urban Residential	-99.00	-99.00	-99.00	-99.00	8.75	-99.00	-99.00	49.10000000	-117.70000000
+102202.00000000	British Columbia	Trail	Trail West	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.09000000	-117.70000000
+102301.00000000	British Columbia	Powell River	Wildlife Sanctuary	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	2.24	-99.00	49.88000000	-124.52000000
+102302.00000000	British Columbia	Powell River	Wildwood Motors	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.89000000	-124.56000000
+102303.00000000	British Columbia	Powell River	6388 Sutherland Drive		-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.89000000	-124.56000000
+102401.00000000	British Columbia	Smithers	4020 Broadway Avenue	Urban Residential	5.14	16.63	28.78	50.29	-99.00	-99.00	-99.00	54.78000000	-127.18000000
+102501.00000000	British Columbia	Terrace	104 - 3220 Eby Street	Urban Residential	2.66	8.25	-99.00	-99.00	-99.00	-99.00	-99.00	54.52000000	-128.60000000
+102602.00000000	British Columbia	Port Alberni	4645 Helen Street		7.95	24.82	-99.00	-99.00	-99.00	-99.00	-99.00	49.26000000	-124.81000000
+102701.00000000	British Columbia	Williams Lake	1045 Western Avenue	Urban Residential	4.49	13.54	31.75	52.75	-99.00	9.65	-99.00	52.14000000	-122.15000000
+102702.00000000	British Columbia	Williams Lake	Skyline School	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	52.12000000	-122.13000000
+102706.00000000	British Columbia	Williams Lake	180 North 3rd Ave	Urban Residential	4.26	12.21	-99.00	-99.00	-99.00	-99.00	-99.00	52.13000000	-122.14000000
+102801.00000000	British Columbia	Campbell River	Adjacent to 660 Westmere	Urban Residential	3.50	9.58	27.60	43.86	-99.00	5.27	-99.00	50.02000000	-125.25000000
+102802.00000000	British Columbia	Campbell River	2662 Tyee Spit Road	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	50.05000000	-125.26000000
+103202.00000000	British Columbia	Golden	835 9th Avenue South	Urban Residential	5.99	15.35	-99.00	-99.00	-99.00	-99.00	-99.00	51.30000000	-116.97000000
+103203.00000000	British Columbia	Golden	CPR Yard	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	51.27000000	-116.93000000
+103204.00000000	British Columbia	Golden	576 Golf Course Road	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	51.33000000	-117.01000000
+103205.00000000	British Columbia	Golden	835 9th Avenue South	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	51.30000000	-116.97000000
+103302.00000000	British Columbia	Nelson	333 Victoria St.	Urban Residential	3.81	9.96	31.70	51.86	-99.00	-99.00	-99.00	49.49000000	-117.30000000
+103402.00000000	British Columbia	Revelstoke	402 Downie Street	Urban Residential	4.84	11.67	-99.00	-99.00	-99.00	-99.00	-99.00	50.99000000	-118.19000000
+103702.00000000	British Columbia	Chetwynd	Gas Plant Site	Urban Residential	-99.00	-99.00	-99.00	-99.00	6.44	-99.00	-99.00	55.58000000	-121.92000000
+103703.00000000	British Columbia	Chetwynd	                                                            	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	55.61000000	-121.97000000
+103704.00000000	British Columbia	Chetwynd	Pine River Gas Plant	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	55.61000000	-121.97000000
+103901.00000000	British Columbia	Kitimat	653 Columbia Street	Urban Residential	2.30	6.58	-99.00	-99.00	-99.00	-99.00	-99.00	54.06000000	-128.67000000
+103902.00000000	British Columbia	Kitimat	Haulage Road	Urban Industrial	3.08	7.63	-99.00	-99.00	1.22	-99.00	-99.00	54.03000000	-128.70000000
+103903.00000000	British Columbia	Kitimat	CN Rail Yard	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	54.06000000	-128.69000000
+103904.00000000	British Columbia	Kitimat	1332 Lahadas Blvd North	Urban Residential	1.48	5.08	-99.00	-99.00	-99.00	-99.00	-99.00	54.07000000	-128.64000000
+103905.00000000	British Columbia	Kitimat	347 Haisla Ave.	Urban Residential	1.89	5.54	-99.00	-99.00	0.19	-99.00	-99.00	53.97000000	-128.65000000
+103906.00000000	British Columbia	Kitimat	#1 Smeltersite Road	Urban Industrial	9.79	20.83	-99.00	-99.00	5.67	-99.00	-99.00	54.02000000	-128.70000000
+104003.00000000	British Columbia	Vernon	2704 Highway 6	Urban Residential	4.89	13.13	29.60	50.57	0.46	10.14	-99.00	50.23000000	-119.28000000
+104101.00000000	British Columbia	Grand Forks	City Hall	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.03000000	-118.44000000
+104301.00000000	British Columbia	Taylor	Mcmahon Complex	Urban Residential	-99.00	-99.00	-99.00	-99.00	1.51	-99.00	-99.00	56.15000000	-120.69000000
+104302.00000000	British Columbia	Taylor	Pingle Creek Road	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	56.11000000	-120.66000000
+104501.00000000	British Columbia	Quadra Island	Lighthouse Road	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	50.00000000	-125.19000000
+104601.00000000	British Columbia	Telkwa	1304 Birch Street	Urban Residential	4.56	16.22	-99.00	-99.00	-99.00	-99.00	-99.00	54.69000000	-127.05000000
+104801.00000000	British Columbia	Duncan	6364 Deykin Avenue	Urban Residential	3.80	10.71	-99.00	-99.00	-99.00	-99.00	-99.00	48.80000000	-123.64000000
+104803.00000000	British Columbia	Duncan	490 Cairnsmore St	Urban Residential	10.77	30.96	27.81	46.88	-99.00	5.18	-99.00	48.78000000	-123.72000000
+105001.00000000	British Columbia	Whistler	Meadow Park	Urban Residential	3.29	9.38	31.98	51.13	-99.00	5.14	-99.00	50.14000000	-122.96000000
+105101.00000000	British Columbia	Houston	Firehall	Urban Residential	4.69	17.75	-99.00	-99.00	-99.00	-99.00	-99.00	54.40000000	-126.64000000
+105201.00000000	British Columbia	Burns Lake	Fire Centre	Urban Residential	4.27	13.91	-99.00	-99.00	-99.00	-99.00	-99.00	54.23000000	-125.76000000
+105301.00000000	British Columbia	Langdale	Forres Road	Urban Residential	-99.00	-99.00	-99.00	-99.00	1.01	5.06	-99.00	49.44000000	-123.49000000
+105501.00000000	British Columbia	Fort St. John	10015 100th Avenue	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	56.25000000	-120.85000000
+105601.00000000	British Columbia	Osoyoos	6601 89th Street	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.04000000	-119.44000000
+105604.00000000	British Columbia	Osoyoos	202 Hwy 97 South	Urban Residential	-99.00	-99.00	36.52	53.50	-99.00	2.72	-99.00	49.00000000	-119.46000000
+106401.00000000	British Columbia	Robson	3113 Charleston Road	Urban Residential	-99.00	-99.00	-99.00	-99.00	3.32	-99.00	-99.00	49.34000000	-117.70000000
+106502.00000000	British Columbia	Fort Nelson	Chalo Road (First Nations Reserve)	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	58.75000000	-122.66000000
+106700.00000000	British Columbia	Crofton	1821 Escarpment Way	Urban Industrial	3.38	7.75	-99.00	-99.00	1.26	-99.00	-99.00	48.84000000	-123.66000000
+106701.00000000	British Columbia	Crofton	8541 Hay St.	Urban Industrial	-99.00	-99.00	-99.00	-99.00	1.31	-99.00	-99.00	48.88000000	-123.65000000
+106800.00000000	British Columbia	Ucluelet	Coast Guard Drive	Urban Residential	-99.00	37.04	-99.00	-99.00	-99.00	0.81	-99.00	48.92000000	-125.54000000
+106900.00000000	British Columbia	Vanderhoof	2441 Bute Road	Urban Residential	9.92	33.54	-99.00	-99.00	-99.00	-99.00	-99.00	54.02000000	-124.01000000
+107000.00000000	British Columbia	Port Alice	1090 Marine Road	Urban Commercial	-99.00	33.25	-99.00	-99.00	8.01	-99.00	-99.00	50.43000000	-127.49000000
+107001.00000000	British Columbia	Port Alice	Lake Road	Urban Industrial	-99.00	-99.00	-99.00	-99.00	4.05	-99.00	-99.00	50.37000000	-127.43000000
+107100.00000000	British Columbia	Courtenay	1540 Mcphee Ave	Urban Residential	-99.00	29.39	-99.00	-99.00	-99.00	-99.00	-99.00	49.68000000	-125.00000000
+70118.00000000	Manitoba	Winnipeg	299 Scotia St.	Urban Residential	7.20	17.63	35.29	55.13	-99.00	7.72	-99.00	49.93000000	-97.11000000
+70119.00000000	Manitoba	Winnipeg	65 Ellen Street	Urban Commercial	-99.00	-99.00	31.67	51.00	0.24	11.63	44.36	49.90000000	-97.15000000
+70203.00000000	Manitoba	Brandon	1430 Victoria Avenue East	Urban Residential	-99.00	-99.00	34.44	53.75	-99.00	-99.00	-99.00	49.84000000	-99.92000000
+70301.00000000	Manitoba	Flin Flon	143 Main Street	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	54.77000000	-101.88000000
+70501.00000000	Manitoba	Thompson	Thompson	Urban Commercial	3.14	11.00	-99.00	-99.00	2.51	-99.00	-99.00	55.75000000	-97.87000000
+40103.00000000	New Brunswick	Fredericton	437 Aberdeen Street	Urban Commercial	5.21	16.58	31.10	48.63	-99.00	3.37	-99.00	45.96000000	-66.65000000
+40203.00000000	New Brunswick	Saint John	Mountain Road	Urban Residential	8.62	32.33	31.73	51.63	0.89	4.05	61.86	45.31000000	-66.01000000
+40206.00000000	New Brunswick	Saint John	189 Prince William	Urban Commercial	-99.00	-99.00	-99.00	54.29	-99.00	-99.00	-99.00	45.27000000	-66.06000000
+40207.00000000	New Brunswick	Saint John	476 Lancaster Avenue W.	Urban Residential	6.04	15.71	31.30	48.63	0.72	-99.00	-99.00	45.25000000	-66.08000000
+40208.00000000	New Brunswick	Saint John	111 Champlain Drive	Urban Residential	6.67	16.38	-99.00	-99.00	1.36	1.71	213.74	45.29000000	-66.00000000
+40209.00000000	New Brunswick	Saint John	8 Castle Street	Urban Commercial	5.30	16.46	-99.00	-99.00	-99.00	-99.00	-99.00	45.28000000	-66.06000000
+40302.00000000	New Brunswick	Moncton	5 Thanet Street	Urban Residential	5.10	14.17	29.62	50.00	-99.00	5.83	-99.00	46.10000000	-64.79000000
+40401.00000000	New Brunswick	Fundy Nat. Park	Hastings Tower	Rural Undeveloped	-99.00	-99.00	35.56	53.13	-99.00	-99.00	-99.00	45.59000000	-64.99000000
+40501.00000000	New Brunswick	Point Lepreau	Recreation Area	Rural Undeveloped	-99.00	-99.00	35.93	56.50	-99.00	-99.00	11.94	45.07000000	-66.45000000
+40601.00000000	New Brunswick	Central Blissville	Airport Road	Rural Undeveloped	-99.00	-99.00	29.46	45.63	-99.00	-99.00	-99.00	45.60000000	-66.56000000
+40701.00000000	New Brunswick	Norton	308 Hwy 124	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	45.64000000	-65.70000000
+40801.00000000	New Brunswick	Dow Settlement	487 Route 122	Rural Undeveloped	-99.00	-99.00	31.61	51.88	-99.00	-99.00	-99.00	45.95000000	-67.48000000
+40901.00000000	New Brunswick	St. Andrews	Brandy Cove Road	Rural Undeveloped	4.99	15.54	32.11	49.88	-99.00	-99.00	-99.00	45.08000000	-67.07000000
+41001.00000000	New Brunswick	Campobello Island	Campobello Island	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	44.87000000	-66.96000000
+41101.00000000	New Brunswick	St. Leonard	312 Ch l'Aeroport	Rural Undeveloped	-99.00	-99.00	32.95	52.38	-99.00	-99.00	-99.00	47.16000000	-67.83000000
+41201.00000000	New Brunswick	Lower Newcastle	55 Route 11 Hwy	Rural Undeveloped	-99.00	-99.00	32.76	52.25	-99.00	-99.00	-99.00	47.07000000	-65.42000000
+41301.00000000	New Brunswick	Bathurst	430 St. Peters Avenue	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	47.63000000	-65.66000000
+41302.00000000	New Brunswick	Bathurst	1255 Rough Waters Drive	Urban Residential	8.56	18.79	32.42	50.00	-99.00	-99.00	-99.00	47.61000000	-65.63000000
+10102.00000000	Newfoundland and Labrador	St. John's	354 Water Street	Urban Commercial	6.57	11.96	30.93	47.00	0.75	6.19	39.78	47.56000000	-52.71000000
+10301.00000000	Newfoundland and Labrador	Corner Brook	Brook Street	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	48.95000000	-57.95000000
+10401.00000000	Newfoundland and Labrador	Mount Pearl	Old Placentia Road	Urban Residential	5.10	11.00	31.65	51.25	0.37	1.72	-99.00	47.51000000	-52.79000000
+10501.00000000	Newfoundland and Labrador	Grand Falls - \Windsor	Scott Avenue	Urban Commercial	-99.00	-99.00	33.65	48.13	0.32	1.02	-99.00	48.93000000	-55.66000000
+10601.00000000	Newfoundland and Labrador	Happy Valley - Goose Bay	Abbot Street	Urban Residential	-99.00	-99.00	33.29	51.13	-99.00	-99.00	-99.00	53.31000000	-60.37000000
+10602.00000000	Newfoundland and Labrador	Corner Brook	Macpherson Avenue	Urban Commercial	6.14	13.88	33.36	49.86	-99.00	2.66	-99.00	48.95000000	-57.92000000
+10701.00000000	Newfoundland and Labrador	Ferrole Point	Ferrole Point Lighthouse	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	51.02000000	-57.10000000
+129002.00000000	Northwest Territories	Yellowknife	4807 52nd Street	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	62.45000000	-114.38000000
+129003.00000000	Northwest Territories	Yellowknife	52nd Ave & 49t Street	Urban Commercial	-99.00	-99.00	29.18	48.00	0.16	3.09	-99.00	62.45000000	-114.36000000
+129102.00000000	Northwest Territories	Norman Wells	                                                            	Urban Industrial	-99.00	-99.00	28.80	51.29	0.33	1.48	-99.00	65.28000000	-126.81000000
+129103.00000000	Northwest Territories	Fort Liard	Airport	Urban Industrial	-99.00	-99.00	-99.00	-99.00	0.28	-99.00	-99.00	60.24000000	-123.47000000
+129202.00000000	Northwest Territories	Inuvik	Kingmingya Rd / Block 17	Urban Residential	-99.00	-99.00	27.36	44.75	0.84	2.39	-99.00	68.36000000	-133.73000000
+129501.00000000	Northwest Territories	Snare Rapids	Snare Rapids	Rural Undeveloped	-99.00	-99.00	32.49	53.63	-99.00	-99.00	-99.00	63.51000000	-116.01000000
+129401.00000000	Nunavut	Alert	Alert	Rural Undeveloped	-99.00	-99.00	32.95	47.63	-99.00	-99.00	10.19	82.45000000	-62.34000000
+60101.00000000	Ontario	Ottawa	88 Slater St.	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	45.42000000	-75.69000000
+60104.00000000	Ontario	Ottawa	Rideau & Wurtemburg	Urban Commercial	4.85	13.75	32.17	53.75	0.36	7.93	28.47	45.43000000	-75.68000000
+60106.00000000	Ontario	Ottawa	960 Carling Ave	Urban Residential	4.48	12.75	33.21	55.38	-99.00	6.63	-99.00	45.38000000	-75.71000000
+60203.00000000	Ontario	Windsor	9725 Riverside Dr. East	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	42.34000000	-82.93000000
+60204.00000000	Ontario	Windsor	467 University Ave. West	Urban Commercial	7.68	21.42	38.80	80.25	3.54	14.45	-99.00	42.32000000	-83.04000000
+60211.00000000	Ontario	Windsor	College & South St.	Urban Residential	7.78	22.17	38.38	80.88	3.36	12.92	-99.00	42.29000000	-83.07000000
+60212.00000000	Ontario	Windsor	Wright & Water St.	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	42.28000000	-83.10000000
+60302.00000000	Ontario	Kingston	133 Dalton Avenue	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	44.23000000	-76.51000000
+60303.00000000	Ontario	Kingston	752 King St. West	Urban Residential	6.90	22.75	37.99	69.00	-99.00	4.62	-99.00	44.22000000	-76.53000000
+60403.00000000	Ontario	Toronto	Evans & Arnold Ave.	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.62000000	-79.52000000
+60410.00000000	Ontario	Toronto	Lawrence & Kennedy	Urban Residential	6.15	18.67	33.18	63.88	-99.00	15.21	-99.00	43.75000000	-79.27000000
+60413.00000000	Ontario	Toronto	Elmcrest Road	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.65000000	-79.59000000
+60415.00000000	Ontario	Mississaugua	Queensway W & Hurontario	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.57000000	-79.61000000
+60418.00000000	Ontario	Toronto	Ruskin & Perth St.	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.66000000	-79.45000000
+60421.00000000	Ontario	Toronto	Yonge St. & Finch Ave.	Urban Commercial	7.72	23.63	32.85	65.13	-99.00	15.40	-99.00	43.78000000	-79.42000000
+60423.00000000	Ontario	Toronto	Clearview Heights	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.70000000	-79.48000000
+60424.00000000	Ontario	Toronto	Bay & Wellesley	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.66000000	-79.39000000
+60426.00000000	Ontario	Toronto	Meadow Pk, Apple Lane C C	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.51000000	-79.61000000
+60427.00000000	Ontario	Toronto	223 College Street	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	45.76	43.66000000	-79.40000000
+60428.00000000	Ontario	Brampton	525 Main St. N. Brampton	Urban Residential	5.96	17.04	36.29	69.13	-99.00	11.26	-99.00	43.70000000	-79.78000000
+60429.00000000	Ontario	Toronto	1 Etona Court	Urban Residential	6.64	19.13	31.97	60.50	-99.00	18.40	-99.00	43.61000000	-79.51000000
+60430.00000000	Ontario	Toronto	125 Resources Road	Urban Commercial	6.92	19.04	31.16	64.13	1.54	19.10	-99.00	43.71000000	-79.54000000
+60432.00000000	Ontario	Mississaugua	310 Bristol Road E.	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.62000000	-79.65000000
+60433.00000000	Ontario	Toronto	Bay & Wellesley	Urban Commercial	6.22	18.38	35.09	65.50	-99.00	14.92	-99.00	43.66000000	-79.39000000
+60434.00000000	Ontario	Mississaugua	3359 Mississauga Rd N	Urban Commercial	5.95	16.88	34.29	63.75	1.29	10.56	-99.00	43.55000000	-79.66000000
+60435.00000000	Ontario	Mississaugua	461 Kipling Ave	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.61000000	-79.52000000
+60501.00000000	Ontario	Hamilton	Barton & Wentworth	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.26000000	-79.84000000
+60511.00000000	Ontario	Hamilton	467 Beach Blvd.	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.28000000	-79.78000000
+60512.00000000	Ontario	Hamilton	Elgin & Kelly	Urban Commercial	8.12	23.92	34.98	66.13	5.22	13.46	-99.00	43.26000000	-79.86000000
+60513.00000000	Ontario	Hamilton	Vickers Rd. & East 18th. St.	Urban Residential	6.66	19.08	38.50	70.75	4.13	9.87	-99.00	43.23000000	-79.86000000
+60515.00000000	Ontario	Hamilton	Main St. & Hwy 403	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.26000000	-79.91000000
+60602.00000000	Ontario	Sudbury	Ash Street	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.49000000	-81.01000000
+60606.00000000	Ontario	Sudbury	Kennedy Street	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.52000000	-80.94000000
+60607.00000000	Ontario	Sudbury	100 Ramsey Lake Rd.	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.48000000	-80.96000000
+60609.00000000	Ontario	Sudbury	Ramsey Lake Road	Urban Commercial	3.97	12.75	35.90	60.50	1.47	-99.00	-99.00	46.48000000	-80.96000000
+60707.00000000	Ontario	Sault Ste. Marie	331 Patrick St.	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.53000000	-84.35000000
+60708.00000000	Ontario	Sault Ste. Marie	Bonney Street	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.52000000	-84.38000000
+60709.00000000	Ontario	Sault Ste. Marie	443 Northern Ave., Sault College	Urban Industrial	4.39	14.54	35.00	59.00	0.76	5.29	-99.00	46.53000000	-84.31000000
+60807.00000000	Ontario	Thunder Bay	615 James Street South	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	48.37000000	-89.29000000
+60809.00000000	Ontario	Thunder Bay	421 James Street South	Urban Residential	4.79	13.46	34.00	51.38	-99.00	8.61	-99.00	48.38000000	-89.29000000
+60903.00000000	Ontario	London	900 Highbury Avenue	Urban Commercial	6.16	16.96	36.05	66.63	-99.00	8.32	-99.00	43.01000000	-81.21000000
+61004.00000000	Ontario	Sarnia	Front St. at C.N. Tracks	Urban Residential	10.42	24.17	39.30	72.38	5.32	8.56	-99.00	42.98000000	-82.41000000
+61005.00000000	Ontario	Sarnia	Con. Rd 26 Mandaumin	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	42.95000000	-82.20000000
+61007.00000000	Ontario	Sarnia	1300 Tashmoo Ave.	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	77.05	42.91000000	-82.47000000
+61103.00000000	Ontario	Peterborough	500 George Street	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	44.31000000	-78.32000000
+61104.00000000	Ontario	Peterborough	10 Hospital Drive	Urban Residential	5.53	17.88	36.45	69.25	-99.00	4.34	-99.00	44.30000000	-78.35000000
+61201.00000000	Ontario	Cornwall	Bedford & Third St.	Urban Residential	5.75	16.33	34.50	60.25	-99.00	6.45	-99.00	45.02000000	-74.74000000
+61302.00000000	Ontario	St. Catharines	Argyle Crescent	Urban Commercial	6.25	18.50	37.68	68.25	-99.00	8.50	-99.00	43.16000000	-79.23000000
+61402.00000000	Ontario	Brantford	324 Grand River Ave.	Urban Commercial	6.66	19.15	39.89	74.88	-99.00	6.10	-99.00	43.14000000	-80.29000000
+61501.00000000	Ontario	Kitchener	Edna & Frederick	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.46000000	-80.47000000
+61502.00000000	Ontario	Kitchener	West Ave. & Homewood	Urban Commercial	6.16	17.46	37.16	65.63	-99.00	7.68	-99.00	43.44000000	-80.50000000
+61602.00000000	Ontario	Oakville	Bronte Rd. & Woburn Cres.	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.40000000	-79.73000000
+61603.00000000	Ontario	Oakville	8th Line/Glenashton Dr.; Halton Reserve	Urban Residential	6.33	17.71	36.78	66.63	-99.00	10.32	-99.00	43.49000000	-79.70000000
+61701.00000000	Ontario	Oshawa	Ritson Rd. & Olive Ave.	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.89000000	-78.85000000
+61702.00000000	Ontario	Oshawa	2200 Simcoe Street North	Urban Residential	5.42	17.46	35.80	65.50	-99.00	6.96	-99.00	43.95000000	-78.89000000
+61802.00000000	Ontario	Guelph	70 Division Street; Exhibition Park	Urban Residential	5.86	17.33	38.82	69.38	-99.00	7.29	-99.00	43.55000000	-80.26000000
+61902.00000000	Ontario	Wallaceburg	8147 Meadowvale Line	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	42.54000000	-82.39000000
+62001.00000000	Ontario	North Bay	Chippewa St.	Urban Residential	4.22	12.83	35.64	62.88	-99.00	7.44	-99.00	46.32000000	-79.45000000
+62201.00000000	Ontario	Merlin	MOE Water Pump Stn.	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	42.24000000	-82.22000000
+62401.00000000	Ontario	Parkhill	Puc Bldg.	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.17000000	-81.68000000
+62501.00000000	Ontario	Tiverton	Bruce Nuclear Visitor Ctr	Rural Undeveloped	4.70	15.83	39.26	71.63	-99.00	2.50	-99.00	44.31000000	-81.55000000
+62601.00000000	Ontario	Simcoe	Experimental Farm	Rural Agricultural	6.29	18.46	41.70	77.88	-99.00	4.16	-99.00	42.86000000	-80.27000000
+62701.00000000	Ontario	Long Point	Provincial Park	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	42.58000000	-80.38000000
+63001.00000000	Ontario	Burlington	Hwy 2 & North Shore Blvd.	Urban Residential	6.22	19.21	36.02	65.75	-99.00	11.81	-99.00	43.32000000	-79.80000000
+63201.00000000	Ontario	Stouffville	Hwy 47 & Hwy 48	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.96000000	-79.27000000
+63301.00000000	Ontario	Dorset	Hwy 117 & Paint Lake Road	Rural Forest	4.12	13.86	36.04	62.00	-99.00	-99.00	-99.00	45.22000000	-78.93000000
+63601.00000000	Ontario	Longwoods	Longwoods Cons. Authority	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	18.42	42.88000000	-81.48000000
+63701.00000000	Ontario	Grand Bend	Hwy 21 & County Rd 83	Rural Undeveloped	6.08	18.88	41.82	78.75	-99.00	3.63	-99.00	43.33000000	-81.74000000
+64001.00000000	Ontario	Exp. Lakes Area	Exp. Lakes Area	Rural Forest	-99.00	-99.00	38.60	56.75	-99.00	-99.00	-99.00	49.66000000	-93.72000000
+64101.00000000	Ontario	Algoma	Algoma	Rural Forest	-99.00	-99.00	36.49	59.88	-99.00	-99.00	-99.00	47.03000000	-84.38000000
+64401.00000000	Ontario	Egbert	Egbert	Rural Agricultural	-99.00	-99.00	38.62	66.25	-99.00	-99.00	-99.00	44.23000000	-79.78000000
+64502.00000000	Ontario	Fort Frances	Armit Ave. & Forth St. E.	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	48.63000000	-93.38000000
+64601.00000000	Ontario	Pt. Petre	Pt. Petre	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	43.84000000	-77.16000000
+65001.00000000	Ontario	Barrie	85 Perry Street	Urban Residential	5.69	17.54	34.56	58.75	-99.00	8.64	-99.00	44.39000000	-79.70000000
+65101.00000000	Ontario	Newmarket	Eagle St. & McCaffrey Rd.	Urban Residential	5.46	18.13	36.99	68.38	-99.00	8.07	-99.00	44.04000000	-79.48000000
+65201.00000000	Ontario	Parry Sound	7 Bay Street	Urban Residential	4.68	17.08	38.16	66.88	-99.00	3.59	-99.00	45.34000000	-80.04000000
+65301.00000000	Ontario	Port Stanley	43665 Dexter Line	Urban Commercial	6.01	18.22	42.00	78.75	-99.00	-99.00	-99.00	42.67000000	-81.16000000
+65401.00000000	Ontario	Belleville	2 Sidney Street	Urban Residential	4.80	14.63	37.00	72.38	-99.00	6.33	-99.00	44.15000000	-77.40000000
+65601.00000000	Ontario	Essex	360 Fairview Ave. W.	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	42.16000000	-82.83000000
+65701.00000000	Ontario	Morrisburg	County Rd.2 / Morrisgurg Water Tower	Urban Commercial	5.19	15.50	35.86	64.88	-99.00	-99.00	-99.00	44.90000000	-75.19000000
+65801.00000000	Ontario	Chatham	435 Grand Avenue W.	Urban Commercial	6.54	19.17	39.27	74.63	-99.00	6.58	-99.00	42.40000000	-82.21000000
+65901.00000000	Ontario	Pickle Lake	Pickle Lake	Rural Undeveloped	-99.00	-99.00	36.00	57.25	-99.00	-99.00	-99.00	51.45000000	-90.22000000
+66001.00000000	Ontario	Fraserdale	Fraserdale	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.88000000	-81.57000000
+66101.00000000	Ontario	Moonbeam	Bonner Lake	Rural Undeveloped	-99.00	-99.00	33.24	53.63	-99.00	-99.00	-99.00	49.39000000	-82.12000000
+66201.00000000	Ontario	Chalk River (Petawawa)		Rural Forest	3.35	10.79	34.10	55.88	-99.00	-99.00	-99.00	46.00000000	-77.44000000
+20101.00000000	Prince Edward Island	Charlottetown	56 Fitzroy St.	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.24000000	-63.13000000
+20201.00000000	Prince Edward Island	North Cape	North Cape	Rural Undeveloped	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	47.05000000	-64.00000000
+50102.00000000	Quebec	Montréal	Boul. Rosemont	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	45.56000000	-73.57000000
+50103.00000000	Quebec	Montréal	1050 A, Boul. Saint-Jean-Baptiste	Urban Residential	10.01	26.82	30.94	60.13	2.04	10.11	80.11	45.64000000	-73.50000000
+50104.00000000	Quebec	Montréal	1125 Rue Ontario Est	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	45.52000000	-73.56000000
+50105.00000000	Quebec	Montréal	1212 Rue Drummond	Urban Commercial	13.47	28.79	-99.00	-99.00	-99.00	-99.00	-99.00	45.50000000	-73.57000000
+50109.00000000	Quebec	Montréal	2495 Duncan / Décarie, Mt-Royal	Urban Commercial	9.64	26.42	25.56	47.00	-99.00	17.49	-99.00	45.50000000	-73.66000000
+50110.00000000	Quebec	Montréal	11280 Boul. Pie IX, Mtl Nord	Urban Commercial	10.14	25.63	29.63	55.86	-99.00	12.18	-99.00	45.59000000	-73.64000000
+50113.00000000	Quebec	Laval	1160 Boul Pie X	Urban Residential	12.22	28.29	32.00	59.38	-99.00	9.08	-99.00	45.55000000	-73.75000000
+50115.00000000	Quebec	Montréal	1001 Boul de Maisonneuve Ouest	Urban Commercial	-99.00	-99.00	24.63	48.13	1.08	18.94	68.97	45.50000000	-73.58000000
+50116.00000000	Quebec	Montréal	3161 Joseph, Verdun	Urban Residential	-99.00	-99.00	28.95	50.25	-99.00	13.30	-99.00	45.47000000	-73.57000000
+50119.00000000	Quebec	Longueuil	Face au 1819 Rue Victoria	Urban Residential	9.54	26.42	31.83	57.00	-99.00	9.73	-99.00	45.52000000	-73.49000000
+50121.00000000	Quebec	Longueuil	8361 Rue Océanie - Brossard	Urban Residential	10.52	24.58	34.25	61.63	0.69	7.40	33.42	45.44000000	-73.47000000
+50123.00000000	Quebec	Montréal	55 Avenue Lilas	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	45.44000000	-73.73000000
+50126.00000000	Quebec	Montréal	20965 Ch. Sainte-Marie, Ste-Annedb	Urban Residential	8.07	20.63	31.88	53.88	-99.00	8.03	-99.00	45.43000000	-73.93000000
+50128.00000000	Quebec	Montréal	90-A Rue Hervé-Saint-Martin, Dorval	Urban Commercial	8.85	25.96	32.69	57.50	-99.00	10.89	-99.00	45.47000000	-73.74000000
+50129.00000000	Quebec	Montréal	12400 Wilfrid-Ouellette	Rural Agricultural	9.75	25.83	30.29	56.88	-99.00	8.03	43.64	45.65000000	-73.57000000
+50130.00000000	Quebec	Montréal	711-A Rue Clément, Dorval	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	45.46000000	-73.77000000
+50131.00000000	Quebec	Montréal	3250 Ste-Catherine Est	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	45.54000000	-73.54000000
+50133.00000000	Quebec	Montréal	8200a Rue Chenier, Anjou	Urban Commercial	9.14	24.82	-99.00	-99.00	0.74	11.72	63.96	45.60000000	-73.54000000
+50134.00000000	Quebec	Montréal	2580 Saint-Joseph Est	Urban Residential	-99.00	-99.00	31.16	55.38	0.99	13.20	46.72	45.54000000	-73.57000000
+50204.00000000	Quebec	Gatineau	255 St-Rédempteur, Hull	Urban Residential	8.01	20.83	32.60	53.63	0.13	6.86	-99.00	45.44000000	-75.72000000
+50306.00000000	Quebec	Québec	Face au 891, Painchaud, Ste-Foy	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.79000000	-71.26000000
+50307.00000000	Quebec	Québec	Rue Jacques Cartier	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.82000000	-71.23000000
+50308.00000000	Quebec	Québec	600 Rue des Sables	Urban Residential	10.88	26.04	27.74	49.38	0.69	10.69	-99.00	46.82000000	-71.22000000
+50309.00000000	Quebec	Québec	1352 Rang St-Ange, Ste-Foy	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.77000000	-71.40000000
+50310.00000000	Quebec	Québec	1150 Boul. René-Lévesque O.	Urban Residential	8.41	21.25	30.57	51.38	-99.00	7.89	-99.00	46.80000000	-71.25000000
+50311.00000000	Quebec	Québec	1465, Rue Félix-Antoine-Savard	Urban Residential	8.32	21.46	30.15	50.00	-99.00	6.65	-99.00	46.77000000	-71.37000000
+50404.00000000	Quebec	Sherbrooke	655, Rue Papineau	Urban Residential	6.94	18.67	33.68	58.25	-99.00	-99.00	-99.00	45.41000000	-71.87000000
+50504.00000000	Quebec	Saguenay	789 Boul des Étudiants, Chicoutimi	Urban Residential	5.50	16.17	31.37	51.25	-99.00	-99.00	-99.00	48.42000000	-71.05000000
+50602.00000000	Quebec	Rouyn-Noranda	218 Rue Portage	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	48.23000000	-79.01000000
+50604.00000000	Quebec	Rouyn-Noranda	1570 Rue Paradis	Urban Residential	7.36	17.58	34.56	52.38	1.84	-99.00	-99.00	48.23000000	-78.98000000
+50801.00000000	Quebec	Trois-Rivières	Face au 678 Rue Hart	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.35000000	-72.54000000
+50902.00000000	Quebec	Saguenay	2885 Berthier (Arvida), Jonquière	Urban Residential	-99.00	-99.00	-99.00	-99.00	4.72	-99.00	-99.00	48.43000000	-71.19000000
+51201.00000000	Quebec	Shawinigan	363 Rue Frigon	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.55000000	-72.74000000
+51302.00000000	Quebec	Baie Comeau	39, Avenue Mance	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	49.22000000	-68.15000000
+51501.00000000	Quebec	St. Zéphirin-de-Courval	701 Rang Saint-Michel	Rural Agricultural	6.75	20.96	33.30	62.13	-99.00	-99.00	-99.00	46.04000000	-72.66000000
+51801.00000000	Quebec	Saint-Joseph-de-Sorel	Face au 113 Léon-XIII	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.05000000	-73.13000000
+51802.00000000	Quebec	Sorel-Tracy	80 Rue George	Urban Residential	-99.00	-99.00	-99.00	-99.00	2.64	-99.00	-99.00	46.04000000	-73.11000000
+52001.00000000	Quebec	Charette	Au Nord du 170 2e Rang	Rural Forest	9.55	24.00	32.34	55.88	-99.00	-99.00	-99.00	46.44000000	-72.89000000
+52101.00000000	Quebec	Saint-Rémi	Voisin du 171, Rang St-paul	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	45.20000000	-73.64000000
+52201.00000000	Quebec	Saint-Simon	Derrière le 83, 4e Rang Est	Rural Agricultural	6.97	21.25	33.82	58.75	-99.00	-99.00	-99.00	45.72000000	-72.84000000
+52301.00000000	Quebec	Saint-Faustin-Lac-Carré	Chemin du Lac (Caribou)	Rural Agricultural	6.41	15.79	34.55	54.38	-99.00	-99.00	-99.00	46.03000000	-74.48000000
+52401.00000000	Quebec	La Pêche	Lac Philippe - Masham	Rural Forest	6.34	17.42	33.79	56.38	-99.00	-99.00	-99.00	45.62000000	-76.02000000
+52601.00000000	Quebec	Varennes	4744 Montée Baronie	Urban Residential	-99.00	-99.00	34.02	61.88	-99.00	5.79	-99.00	45.72000000	-73.38000000
+52602.00000000	Quebec	Varennes	1870 Route Marie-Victorin	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	45.67000000	-73.44000000
+52701.00000000	Quebec	Témiscaming	Rue Boucher	Urban Industrial	-99.00	-99.00	35.73	62.38	-99.00	-99.00	-99.00	46.72000000	-79.10000000
+52801.00000000	Quebec	Auclair	66 Rang St-Grégoire Nord	Rural Forest	3.51	10.58	33.32	52.00	-99.00	-99.00	-99.00	47.73000000	-68.71000000
+53201.00000000	Quebec	La Doré	Route 167- la Doré	Rural Forest	4.25	10.92	32.60	54.88	-99.00	-99.00	-99.00	48.81000000	-72.74000000
+53301.00000000	Quebec	Deschambault	334, 3 E Rang - Deshambault	Rural Agricultural	5.69	17.28	31.21	53.25	-99.00	-99.00	-99.00	46.68000000	-71.97000000
+53401.00000000	Quebec	Ste-Cath.-de-J-Cartier	Face au 56 Laurier	Rural Agricultural	-99.00	-99.00	29.67	52.13	-99.00	-99.00	-99.00	46.84000000	-71.62000000
+53501.00000000	Quebec	Saint-François	Face au 198, Royale Île d'Orléans	Rural Agricultural	-99.00	-99.00	33.41	54.75	-99.00	-99.00	-99.00	47.01000000	-70.86000000
+53601.00000000	Quebec	Notre-Dame-du-Rosaire	Rang St-Louis	Rural Forest	4.03	12.83	33.56	56.88	-99.00	-99.00	-99.00	46.85000000	-70.45000000
+53701.00000000	Quebec	St-Hilaire-de-Dorset	Rang Dorset	Rural Forest	7.37	18.25	38.17	60.00	-99.00	-99.00	-99.00	45.82000000	-70.86000000
+53801.00000000	Quebec	Tingwick	Chemin Radar et Warwick	Rural Agricultural	8.74	20.38	36.10	57.75	-99.00	-99.00	-99.00	45.91000000	-71.95000000
+53901.00000000	Quebec	Lac-Édouard	Derrière l'hôpital Village	Rural Forest	4.50	11.46	-99.00	50.88	-99.00	-99.00	-99.00	47.65000000	-72.29000000
+54102.00000000	Quebec	Sutton	Mont Sutton/Round Top Ridge	Rural Undeveloped	-99.00	-99.00	40.77	60.38	-99.00	-99.00	29.73	45.09000000	-72.56000000
+54201.00000000	Quebec	Chapais	Chapais	Rural Undeveloped	-99.00	-99.00	34.74	57.00	-99.00	-99.00	-99.00	49.82000000	-74.98000000
+54301.00000000	Quebec	Ste-Françoise	408-12e Rang et Route 265	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	46.43000000	-71.93000000
+54401.00000000	Quebec	Saint-Anicet	1128 de la Guerre	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	16.76	45.12000000	-74.28000000
+54501.00000000	Quebec	L'Assomption	801 St-Étienne/Route 344	Urban Residential	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	19.98	45.81000000	-73.43000000
+54601.00000000	Quebec	Murdochville	603 des Bouleaux	Urban Industrial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	48.95000000	-65.50000000
+54703.00000000	Quebec	Bécancour	8310 Boul. Bécancour	Urban Residential	10.34	24.92	-99.00	-99.00	1.11	4.27	-99.00	46.35000000	-72.43000000
+54801.00000000	Quebec	Stukely-Sud	Chemin Montbel	Rural Forest	6.58	16.21	35.77	58.00	-99.00	-99.00	-99.00	45.37000000	-72.26000000
+54901.00000000	Quebec	La Patrie	Rang Petit Canada Ouest	Rural Forest	2.47	12.25	34.37	54.63	-99.00	-99.00	-99.00	45.37000000	-71.25000000
+55001.00000000	Quebec	Ferme Neuve	215 4 Ième Rang Gravel	Rural Forest	4.02	12.17	32.11	52.63	-99.00	-99.00	-99.00	46.77000000	-75.43000000
+55101.00000000	Quebec	Senneterre	Chemin Rivière Bell	Rural Forest	5.01	14.00	33.27	54.75	-99.00	-99.00	-99.00	48.43000000	-77.20000000
+55201.00000000	Quebec	Lemieux	1290 Rte des Atocas	Rural Agricultural	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	14.27	46.30000000	-72.06000000
+55301.00000000	Quebec	Saint-Jean-Sur-Richelieu	Ferme Exp., 1134 Route 219	Rural Agricultural	8.32	23.92	-99.00	59.13	-99.00	-99.00	-99.00	45.29000000	-73.35000000
+55401.00000000	Quebec	Trois-Rivières	Rue Roy & Dorval, Cap Mad.	Urban Industrial	-99.00	-99.00	-99.00	-99.00	0.40	-99.00	-99.00	46.36000000	-72.51000000
+55501.00000000	Quebec	Frelighsburg	Frelighsburg	Rural Forest	-99.00	-99.00	38.14	59.63	-99.00	-99.00	-99.00	45.05000000	-72.86000000
+55601.00000000	Quebec	Mingan	Mingan	Rural Undeveloped	-99.00	-99.00	31.40	50.13	-99.00	-99.00	-99.00	50.27000000	-64.23000000
+55701.00000000	Quebec	Lévis	2254, Rotonde, Charny	Urban Residential	-99.00	-99.00	30.02	50.63	-99.00	-99.00	-99.00	46.71000000	-71.27000000
+80110.00000000	Saskatchewan	Regina	2505 11th. Avenue	Urban Commercial	-99.00	-99.00	34.25	59.38	0.45	9.41	104.90	50.45000000	-104.62000000
+80211.00000000	Saskatchewan	Saskatoon	511 1st Avenue North	Urban Commercial	5.39	14.46	33.41	58.50	0.82	11.46	-99.00	52.14000000	-106.66000000
+80402.00000000	Saskatchewan	Prince Albert	63 - 12th Street East	Urban Commercial	3.55	9.96	34.45	55.63	-99.00	7.65	-99.00	53.20000000	-105.75000000
+80901.00000000	Saskatchewan	Bratt's Lake	Radiation Observatory	Rural Agricultural	-99.00	-99.00	37.89	57.63	-99.00	-99.00	-99.00	50.20000000	-104.71000000
+81001.00000000	Saskatchewan	Swift Current	1200 Begg St. W	Urban Commercial	-99.00	-99.00	35.24	51.00	-99.00	8.75	-99.00	50.29000000	-107.82000000
+119003.00000000	Yukon	Whitehorse	1091 - 1st Avenue	Urban Commercial	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	-99.00	60.72000000	-135.05000000
