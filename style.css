@@ -1,5 +1,183 @@
-html, body {
+@import url(http://fonts.googleapis.com/css?family=Lemon);
+
+html, body, #main, #map {
     width: 100%;
     height: 100%;
     margin: 0;
+}
+
+body {
+    background-color: #212121;
+}
+
+#main {
+    display:table;
+}
+
+#titlebar {
+    display: table-row;
+    height: 6em;
+    text-align: center;
+    background-color: black;
+}
+
+#titlebar h1 {
+    margin: 0;
+    font-size: 6em;
+    font-family: Lemon, sans-serif;
+    color: white;
+}
+
+#content {
+    height: 100%;
+    display: table-row;
+}
+
+.valign {
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.home, .search {
+    width: 80%;
+    margin: auto;
+    text-align:center;
+}
+
+.home button {
+    width: 90%;
+    padding: 0.5em 0 0.5em 0;
+    font: 3em sans-serif;
+}
+
+.search input, .search select, .search button {
+    height: 2em;
+    font: 2em sans-serif;
+}
+
+.search-results {
+    width: 100%;
+    font: 2em sans-serif;
+    color: white;
+}
+
+.search-results ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.search-results li {
+    padding: 0.5em 0 0.5em 0;
+    border-width: 0 0 1px 0;
+    border-style: dotted;
+    border-color: gray;
+}
+
+.search-results li:hover {
+    background-color: #808080;
+}
+
+.location {
+    width: 100%;
+    font: 2em sans-serif;
+    color: white;
+}
+
+.location h2 {
+    margin: 0;
+    display: inline-block;
+    font-size: 0.5em;
+}
+
+.location button {
+    float: right;
+}
+
+.location .topbar {
+    background-color: #000729;
+}
+
+.location .details {
+    width: 80%;
+    margin: auto;
+    padding: 0.1em;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: gray;
+    font-size: 0.5em;
+}
+
+.location .details p {
+    margin: 0;
+}
+
+ul.indicators {
+    padding: 0;
+    margin: 0;
+    clear: both;
+    list-style-type: none;
+}
+
+.indicators li {
+    padding: 0.25em 0 0.25em 0;
+    border-width: 0 0 1px 0;
+    border-style: dotted;
+    border-color: gray;
+}
+
+.indicators .value {
+    padding-right: 0.25em;
+    float: right;
+}
+
+.indicators .unit {
+    font-size: 0.5em;
+    color: gray;
+}
+
+.ambient .level-0 {
+    color: gray;
+}
+
+.ambient .level-1 {
+    color: #EBEB2C;
+}
+
+.ambient .level-2 {
+    color: #F19C1D;
+}
+
+.ambient .level-3 {
+    color: #F84E0E;
+}
+
+.ambient .level-4 {
+    color: #FF0000;
+}
+
+.toxics .level-0, .pollutants .level-0 {
+    color: gray;
+}
+
+.toxics .level-1, .pollutants .level-1 {
+    color: #EBEB2C;
+}
+
+.toxics .level-2, .pollutants .level-2 {
+    color: #F0B021;
+}
+
+.toxics .level-3, .pollutants .level-3 {
+    color: #F57516;
+}
+
+.toxics .level-4, .pollutants .level-4 {
+    color: #FA3A0B;
+}
+
+.toxics .level-5, .pollutants .level-5 {
+    color: #FF0000;
 }
