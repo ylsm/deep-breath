@@ -50,6 +50,17 @@ app.showLocation = function (obj) {
     // TODO: Find monitoring station within 10km radius, display info;
 }
 
+app.getAirQualityData = function (lat, lng) {
+    var data = [];
+    for (var i in app.data.airQuality) {
+        var stn = app.data.airQuality[i];
+        if (Math.sqrt(pow((lat - stn.Latitude), 2) + pow((lng - stn.Longitude, 2))) <= 10) {
+            data.push(stn);
+        }
+    }
+    return data;
+}
+
 window.addEventListener('popstate', function(e) {
     if (event.state.view) {
         switch(event.state.view) {
