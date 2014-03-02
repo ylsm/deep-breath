@@ -5,6 +5,22 @@ app.loading = {"files": 3, "loaded": 0};
 app.newState = true; // only add new state to history if this is true - needed to make back button work properly
 app.range = 15; // km; default range to look for monitoring stations within
 app.IGNORE = -99;
+app.levels = {"ambient":{}, "emissions":{}};
+app.levels.ambient.fpmAvg = [10, 8, 6, 4];
+app.levels.ambient.fpmPeak = [28, 20, 15, 10];
+app.levels.ambient.ozoneAvg = [45, 40, 35, 30];
+app.levels.ambient.ozonePeak = [63, 60, 55, 50];
+app.levels.ambient.sulphur = [4, 2, 1, 0.5];
+app.levels.ambient.nitrogen = [16, 12, 8, 4];
+app.levels.ambient.voc = [100, 60, 40, 20];
+app.levels.emissions.nox = [800, 400, 200, 100, 50];
+app.levels.emissions.sox = [6000, 2000, 500, 100, 25];
+app.levels.emissions.voc = [400, 200, 100, 30, 15];
+app.levels.emissions.pm25 = [100, 25, 5, 1, 0.5];
+app.levels.emissions.pm10 = [250, 50, 10, 5, 1];
+app.levels.emissions.tpm = [1000, 250, 100, 25, 5];
+app.levels.emissions.nh3 = [400, 100, 25, 5, 1];
+app.levels.emissions.co = [1000, 500, 100, 50, 25];
 
 app.start = function() {
     app.navigate("home");
@@ -65,11 +81,11 @@ app.showLocation = function (obj) {
         $( '#content' ).append("No monitoring stations in range");
     } else {
         var ulAmbient = $( '<ul>' ).appendTo( '#content' );
-        ulAmbient.append( '<li>Average FPM: ' + dataAmbient.fpmAvg + '</li>' );
-        ulAmbient.append( '<li>Average Ozone: ' + dataAmbient.ozoneAvg + '</li>' );
-        ulAmbient.append( '<li>Sulphur Dioxide: ' + dataAmbient.sulphur + '</li>' );
-        ulAmbient.append( '<li>Nitrogen Dioxide: ' + dataAmbient.nitrogen + '</li>' );
-        ulAmbient.append( '<li>VOCs: ' + dataAmbient.voc + '</li>' );
+        ulAmbient.append(app.helpers.makeLi("ambient", "fpmAvg", "Average FPM", dataAmbient.fpmAvg));
+        ulAmbient.append(app.helpers.makeLi("ambient", "ozoneAvg", "Average Ozone", dataAmbient.ozoneAvg));
+        ulAmbient.append(app.helpers.makeLi("ambient", "sulphur", "Sulphur Dioxide", dataAmbient.sulphur));
+        ulAmbient.append(app.helpers.makeLi("ambient", "nitrogen", "Nitogen Dioxide", dataAmbient.nitrogen));
+        ulAmbient.append(app.helpers.makeLi("ambient", "voc", "VOCs", dataAmbient.voc));
         $( '#content' ).append( '<p>This information is the average of the data from:</p>' );
         var ulStations = $( '<ul>' ).appendTo( '#content' );
         for (var i in dataAmbient.stations) {
@@ -82,13 +98,13 @@ app.showLocation = function (obj) {
         $( '#content' ).append("No large emitters in range");
     } else {
         var ulPollutants = $( '<ul>' ).appendTo( '#content' );
-        ulPollutants.append( '<li>Total NOx Emissions: ' + dataPollutants.nox + '</li>' );
-        ulPollutants.append( '<li>Total SOx Emissions: ' + dataPollutants.sox + '</li>' );
-        ulPollutants.append( '<li>Total VOC Emissions: ' + dataPollutants.voc + '</li>' );
-        ulPollutants.append( '<li>Total PM2.5 Emissions: ' + dataPollutants.pm25 + '</li>' );
-        ulPollutants.append( '<li>Total PM10 Emissions: ' + dataPollutants.pm10 + '</li>' );
-        ulPollutants.append( '<li>Total TPM Emissions: ' + dataPollutants.tpm + '</li>' );
-        ulPollutants.append( '<li>Total CO Emissions: ' + dataPollutants.co + '</li>' );
+        ulPollutants.append(app.helpers.makeLi("emissions", "nox", "Total NOx Emissions", dataPollutants.nox));
+        ulPollutants.append(app.helpers.makeLi("emissions", "sox", "Total SOx Emissions", dataPollutants.sox));
+        ulPollutants.append(app.helpers.makeLi("emissions", "voc", "Total VOC Emissions", dataPollutants.voc));
+        ulPollutants.append(app.helpers.makeLi("emissions", "pm25", "Total PM2.5 Emissions", dataPollutants.pm25));
+        ulPollutants.append(app.helpers.makeLi("emissions", "pm10", "Total PM10 Emissions", dataPollutants.pm10));
+        ulPollutants.append(app.helpers.makeLi("emissions", "tpm", "Total TPM Emissions", dataPollutants.tpm));
+        ulPollutants.append(app.helpers.makeLi("emissions", "co", "Total CO Emissions", dataPollutants.co));
     }
 }
 
@@ -228,6 +244,25 @@ app.helpers.getDistance = function (lat1,lon1,lat2,lon2) {
     return d;
 }
 
+app.helpers.makeLi = function (cat, type, text, value) {
+    var level;
+    if (value == "No Data") {
+        level = "none";
+    }
+    else if (parseFloat(value) == app.IGNORE) {
+        return null;
+    } else {
+        for (var i = 0; i < app.levels[cat][type].length; i++) {
+            if (parseFloat(value) >= app.levels[cat][type][i]) {
+                level = i;
+                break;
+            }
+        }
+        level = app.levels[cat][type].length;
+    }
+    return $( '<li class="' + cat + ' level-' + level + '">' + text + ': ' + value + '</li>' );
+}
+
 app.navigate = function (view) {
     switch(view) {
         case "home":
@@ -268,7 +303,7 @@ $(function() {
         app.data.pollutants = $.csv.toObjects(data, {"separator":"\t"});
         app.loading.loaded += 1;
     });
-    $.get('data/emissions_toxins.csv', function(data) {
+    $.get('data/emissions_toxics.csv', function(data) {
         app.data.toxins = $.csv.toObjects(data, {"separator":"\t"});
         app.loading.loaded += 1;
     });
